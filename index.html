@@ -1,21 +1,36 @@
+```html
 <!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Md. Rasel Ahmed | Team Lead</title>
+
+  <title>Md. Rasel Ahmed | Team Lead & Full-Stack Software Engineer</title>
+
   <meta name="description"
-    content="Md. Rasel Ahmed — Team Lead and Full Stack Developer leading RK.Web.Client, RK.Web.Backend and RK.Web.Lib, with experience across enterprise .NET platforms, SQL Server and cloud delivery.">
-  <meta property="og:title" content="Md. Rasel Ahmed — Team Lead">
+    content="Md. Rasel Ahmed — Team Lead and Full-Stack Software Engineer with 13+ years of experience in .NET, Angular, enterprise architecture, microservices, micro-frontends and AI-assisted software engineering.">
+
+  <meta name="keywords"
+    content="Md Rasel Ahmed, Team Lead, Software Engineer, Full Stack Developer, C#, .NET, ASP.NET Core, Angular, SQL Server, Microservices, Micro Frontend, AI-assisted software engineering">
+
+  <meta name="author" content="Md. Rasel Ahmed">
+
+  <meta property="og:title" content="Md. Rasel Ahmed — Team Lead & Full-Stack Software Engineer">
   <meta property="og:description"
-    content="Team Lead building enterprise web platforms with RK.Web.Client, RK.Web.Backend, RK.Web.Lib, .NET, Angular, SQL Server and Azure DevOps.">
+    content="Team Lead building enterprise software platforms with .NET, Angular, microservices, micro-frontends and AI-assisted engineering practices.">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://raselahmedit09.github.io/">
+
+  <link rel="canonical" href="https://raselahmedit09.github.io/">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
     rel="stylesheet">
+
   <style>
     :root {
       --bg: #f7f8fb;
@@ -27,7 +42,11 @@
       --accent: #2f5bea;
       --accent-soft: #e4ebff;
       --accent-2: #0f9d7a;
-      --shadow: 0 1px 2px rgba(20, 24, 36, .05), 0 4px 16px rgba(20, 24, 36, .06);
+      --accent-2-soft: #e2f7f1;
+      --warning-soft: #fff4dc;
+      --shadow: 0 1px 2px rgba(20, 24, 36, .05),
+        0 4px 16px rgba(20, 24, 36, .06);
+      --shadow-hover: 0 8px 28px rgba(20, 24, 36, .10);
       --radius: 14px;
       --mono: 'JetBrains Mono', ui-monospace, monospace;
       color-scheme: light;
@@ -44,7 +63,11 @@
         --accent: #7c9cff;
         --accent-soft: #1f2a4a;
         --accent-2: #3fd0a8;
-        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+        --accent-2-soft: #18382f;
+        --warning-soft: #382f1c;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3),
+          0 4px 16px rgba(0, 0, 0, .25);
+        --shadow-hover: 0 10px 32px rgba(0, 0, 0, .35);
         color-scheme: dark;
       }
     }
@@ -59,7 +82,11 @@
       --accent: #7c9cff;
       --accent-soft: #1f2a4a;
       --accent-2: #3fd0a8;
-      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+      --accent-2-soft: #18382f;
+      --warning-soft: #382f1c;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3),
+        0 4px 16px rgba(0, 0, 0, .25);
+      --shadow-hover: 0 10px 32px rgba(0, 0, 0, .35);
       color-scheme: dark;
     }
 
@@ -69,13 +96,15 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 72px;
     }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font: 16px/1.6 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      font: 16px/1.65 'Inter', system-ui, -apple-system,
+        'Segoe UI', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -89,32 +118,35 @@
     }
 
     .wrap {
-      max-width: 1040px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 0 16px;
+      padding: 0 18px;
     }
 
-    /* Nav */
+    /* Navigation */
+
     nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: color-mix(in srgb, var(--bg) 85%, transparent);
-      backdrop-filter: blur(10px);
+      z-index: 100;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
     nav .wrap {
       display: flex;
       align-items: center;
-      gap: 16px;
-      height: 60px;
+      gap: 18px;
+      min-height: 62px;
     }
 
     .brand {
-      font-weight: 700;
       color: var(--text);
-      letter-spacing: -.01em;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      font-size: 18px;
+      white-space: nowrap;
     }
 
     .brand span {
@@ -123,14 +155,16 @@
 
     .nav-links {
       display: flex;
-      gap: 20px;
+      align-items: center;
+      gap: 17px;
       margin-left: auto;
     }
 
     .nav-links a {
       color: var(--text-muted);
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -147,9 +181,14 @@
       border-radius: 10px;
       cursor: pointer;
       font-size: 16px;
+      flex-shrink: 0;
     }
 
-    @media (max-width: 720px) {
+    .theme-btn:hover {
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 900px) {
       .nav-links {
         display: none;
       }
@@ -160,56 +199,53 @@
     }
 
     /* Hero */
+
     .hero {
-      padding: 72px 0 56px;
+      padding: 76px 0 58px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 210px;
+      gap: 40px;
+      align-items: start;
     }
 
     .eyebrow {
       display: inline-block;
-      font: 500 13px var(--mono);
+      font: 500 12px var(--mono);
       color: var(--accent);
       background: var(--accent-soft);
-      padding: 4px 10px;
+      padding: 5px 11px;
       border-radius: 999px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(34px, 6vw, 54px);
-      line-height: 1.1;
+      font-size: clamp(38px, 6vw, 58px);
+      line-height: 1.06;
       margin: 0 0 14px;
-      letter-spacing: -.02em;
+      letter-spacing: -.035em;
     }
 
-    .profile-photo {
-      float: right;
-      width: 180px;
-      height: 220px;
-      object-fit: cover;
-      object-position: center top;
-      margin: 0 0 24px 40px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
+    .hero .headline {
+      font-size: clamp(20px, 3vw, 25px);
+      line-height: 1.4;
+      margin: 0 0 18px;
+      color: var(--text-muted);
+      max-width: 850px;
+    }
+
+    .hero .headline strong {
+      color: var(--text);
+      font-weight: 700;
     }
 
     .specialties {
       color: var(--text-muted);
-      font: 500 13px var(--mono);
-      margin: 0 0 18px;
-      max-width: 900px;
-    }
-
-    .hero .role {
-      font-size: clamp(18px, 2.6vw, 22px);
-      color: var(--text-muted);
+      font: 500 12.5px/1.8 var(--mono);
       margin: 0 0 22px;
-      max-width: 760px;
-    }
-
-    .hero .role strong {
-      color: var(--text);
-      font-weight: 600;
+      max-width: 850px;
     }
 
     .hero .summary {
@@ -223,6 +259,16 @@
       font-weight: 600;
     }
 
+    .profile-photo {
+      width: 200px;
+      height: 245px;
+      object-fit: cover;
+      object-position: center top;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
     .cta {
       display: flex;
       flex-wrap: wrap;
@@ -232,20 +278,24 @@
     .btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      padding: 10px 16px;
+      min-height: 42px;
+      padding: 9px 15px;
       border-radius: 10px;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
       border: 1px solid var(--border);
       background: var(--surface);
       color: var(--text);
       box-shadow: var(--shadow);
+      transition: .2s ease;
     }
 
     .btn:hover {
       text-decoration: none;
       border-color: var(--accent);
+      transform: translateY(-1px);
     }
 
     .btn.primary {
@@ -257,8 +307,8 @@
     .social-btn {
       width: 44px;
       height: 44px;
+      min-height: 44px;
       padding: 0;
-      justify-content: center;
     }
 
     .social-btn svg {
@@ -268,85 +318,196 @@
     }
 
     .social-mark {
-      font: 700 15px/1 var(--mono);
-      letter-spacing: 0;
+      font: 700 14px/1 var(--mono);
     }
 
     .stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
-      margin-top: 40px;
+      margin-top: 42px;
     }
 
     .stat {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 16px;
+      padding: 17px;
+      box-shadow: var(--shadow);
     }
 
     .stat b {
       display: block;
-      font-size: 26px;
-      letter-spacing: -.02em;
+      font-size: 27px;
+      letter-spacing: -.03em;
     }
 
     .stat span {
       color: var(--text-muted);
-      font-size: 13px;
+      font-size: 12.5px;
     }
 
     @media (max-width: 720px) {
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
       }
 
       .profile-photo {
-        float: none;
-        display: block;
-        margin: 0 0 24px;
         width: 150px;
         height: 185px;
+        order: -1;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     /* Sections */
+
     section {
-      padding: 56px 0;
+      padding: 62px 0;
       border-top: 1px solid var(--border);
     }
 
     section h2 {
-      font-size: 28px;
-      margin: 0 0 8px;
-      letter-spacing: -.01em;
+      font-size: 29px;
+      line-height: 1.25;
+      margin: 0 0 9px;
+      letter-spacing: -.02em;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font: 600 11px var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 7px;
     }
 
     .lead {
       color: var(--text-muted);
       margin: 0 0 28px;
-      max-width: 720px;
+      max-width: 800px;
     }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 21px;
       box-shadow: var(--shadow);
     }
 
-    /* Skills */
-    .skills {
+    /* Leadership */
+
+    .leadership-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
     }
 
-    .skills h3 {
-      margin: 0 0 12px;
-      font-size: 15px;
+    .lead-card h3,
+    .skills h3,
+    .focus-card h3 {
+      margin: 0 0 11px;
+      font-size: 16px;
+    }
+
+    .lead-card p,
+    .focus-card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    ul.check {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.check li {
+      padding-left: 23px;
+      position: relative;
+      margin-bottom: 9px;
+      font-size: 14px;
+    }
+
+    ul.check li:last-child {
+      margin-bottom: 0;
+    }
+
+    ul.check li::before {
+      content: '▸';
+      position: absolute;
+      left: 4px;
+      color: var(--accent);
+    }
+
+    /* Leadership philosophy */
+
+    .philosophy {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .philosophy-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 17px;
+      position: relative;
+    }
+
+    .philosophy-step b {
+      display: block;
+      color: var(--accent);
+      font: 600 12px var(--mono);
+      margin-bottom: 7px;
+    }
+
+    .philosophy-step span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Current focus */
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+    }
+
+    .focus-card {
+      border-top: 3px solid var(--accent);
+    }
+
+    .focus-card:nth-child(2) {
+      border-top-color: var(--accent-2);
+    }
+
+    .focus-card:nth-child(3) {
+      border-top-color: #8b5cf6;
+    }
+
+    .focus-card:nth-child(4) {
+      border-top-color: #e59f22;
+    }
+
+    /* Skills */
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
 
     .tags {
@@ -356,26 +517,99 @@
     }
 
     .tag {
-      font-size: 12.5px;
-      padding: 3px 9px;
+      font-size: 12px;
+      padding: 4px 9px;
       border-radius: 999px;
       background: var(--surface-2);
       color: var(--text);
       border: 1px solid var(--border);
     }
 
-    /* Case study */
+    /* Architecture decisions */
+
+    .decisions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .decision {
+      display: grid;
+      grid-template-columns: 180px 1fr 1fr;
+      gap: 18px;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .decision strong {
+      font-size: 14px;
+    }
+
+    .decision span {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .decision .approach {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* AI */
+
+    .ai-box {
+      background: linear-gradient(135deg,
+          var(--surface),
+          var(--accent-soft));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+    }
+
+    .ai-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin-top: 22px;
+    }
+
+    .ai-item {
+      background: color-mix(in srgb, var(--surface) 80%, transparent);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .ai-item b {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .ai-item span {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .principle {
+      margin-top: 20px;
+      padding: 14px 17px;
+      background: var(--surface);
+      border-left: 3px solid var(--accent-2);
+      border-radius: 8px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Featured work */
+
     .case {
       display: grid;
       grid-template-columns: 1.15fr 1fr;
       gap: 20px;
       align-items: start;
-    }
-
-    @media (max-width: 860px) {
-      .case {
-        grid-template-columns: 1fr;
-      }
     }
 
     .diagram svg {
@@ -428,35 +662,64 @@
       fill: var(--text-muted);
     }
 
-    ul.check {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    ul.check li {
-      padding-left: 24px;
-      position: relative;
+    .case-role {
+      color: var(--accent);
+      font: 600 12px var(--mono);
       margin-bottom: 10px;
     }
 
-    ul.check li::before {
-      content: '▸';
-      position: absolute;
-      left: 4px;
-      color: var(--accent);
+    .case h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+    }
+
+    .case-intro {
+      color: var(--text-muted);
+      margin-top: 0;
+      font-size: 14px;
     }
 
     .note {
       font-size: 13px;
       color: var(--text-muted);
-      margin-top: 12px;
+      margin-top: 14px;
+    }
+
+    /* Case study */
+
+    .case-study {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+      margin-top: 20px;
+    }
+
+    .case-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .case-step b {
+      display: block;
+      font: 600 11px var(--mono);
+      color: var(--accent);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .case-step p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
     /* Projects */
+
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
 
@@ -465,11 +728,14 @@
       flex-direction: column;
       gap: 8px;
       color: var(--text);
+      transition: .2s ease;
     }
 
     .project:hover {
       text-decoration: none;
       border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
     }
 
     .project h3 {
@@ -481,15 +747,17 @@
     .project p {
       margin: 0;
       color: var(--text-muted);
-      font-size: 14px;
+      font-size: 13.5px;
       flex: 1;
     }
 
     .project .meta {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
-      font-size: 12.5px;
+      font-size: 12px;
       color: var(--text-muted);
+      margin-top: 5px;
     }
 
     .dot {
@@ -510,6 +778,7 @@
     }
 
     /* Experience */
+
     .timeline {
       display: grid;
       gap: 16px;
@@ -534,33 +803,41 @@
     }
 
     .job .when {
-      font: 500 12.5px var(--mono);
+      font: 500 12px var(--mono);
       color: var(--text-muted);
-      margin: 2px 0 8px;
+      margin: 3px 0 8px;
     }
 
     .job .roles {
       font-size: 14px;
       color: var(--text-muted);
-      margin: 0 0 8px;
+      margin: 0 0 9px;
     }
 
     .job .project-line {
       color: var(--text-muted);
       font-size: 14px;
-      margin: 0 0 12px;
+      margin: 0 0 13px;
     }
 
     .job ul {
       margin: 0;
-      padding-left: 18px;
+      padding-left: 19px;
     }
 
     .job li {
-      margin-bottom: 4px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    /* Education */
+
+    .education-card {
+      max-width: 720px;
     }
 
     /* Contact */
+
     .contact {
       display: flex;
       flex-wrap: wrap;
@@ -594,7 +871,7 @@
     }
 
     .contact-form textarea {
-      min-height: 170px;
+      min-height: 160px;
       resize: vertical;
     }
 
@@ -612,11 +889,12 @@
     }
 
     .contact-form .btn {
-      justify-content: center;
+      cursor: pointer;
       min-height: 50px;
       width: 100%;
-      cursor: pointer;
     }
+
+    /* Accessibility */
 
     .sr-only {
       position: absolute;
@@ -630,430 +908,1591 @@
       border: 0;
     }
 
+    :focus-visible {
+      outline: 3px solid var(--accent-soft);
+      outline-offset: 2px;
+    }
+
+    /* Footer */
+
     footer {
-      padding: 28px 0 40px;
+      padding: 30px 0 42px;
       color: var(--text-muted);
-      font-size: 13px;
+      font-size: 12.5px;
       border-top: 1px solid var(--border);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 950px) {
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .philosophy {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .decision {
+        grid-template-columns: 150px 1fr;
+      }
+
+      .decision .approach {
+        grid-column: 2;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .case {
+        grid-template-columns: 1fr;
+      }
+
+      .leadership-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-study {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ai-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 620px) {
+      section {
+        padding: 48px 0;
+      }
+
+      .skills,
+      .focus-grid,
+      .projects,
+      .case-study,
+      .ai-grid,
+      .philosophy {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .decision {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .decision .approach {
+        grid-column: auto;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Navigation -->
+
   <nav>
     <div class="wrap">
       <a class="brand" href="#top">Rasel<span>.</span></a>
+
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#stack">Stack</a>
-        <a href="#work">Featured work</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#ai">AI Engineering</a>
+        <a href="#work">Featured Work</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
-      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        ◐
+      </button>
     </div>
   </nav>
 
+
+  <!-- Hero -->
+
   <header class="hero" id="top">
+
     <div class="wrap">
-      <span class="eyebrow">Dhaka, Bangladesh · Open to opportunities</span>
-      <h1>Md. Rasel Ahmed</h1>
-      <img class="profile-photo" src="profile.jpg" alt="Portrait of Md. Rasel Ahmed" width="180" height="220">
-      <p class="specialties">Lead Software Engineer · Full-Stack Software Engineer · C# · ASP.NET Core · Angular · SQL
-        Server
-        · Microservices · Micro-Frontends · Azure</p>
-      <p class="role"><strong>Team Lead &amp; Full-Stack Software Engineer</strong> with 13+ years of experience
-        designing and delivering enterprise software platforms using C#, ASP.NET Core, Angular, SQL Server and Java.
-      </p>
-      <div class="cta">
-        <a class="btn primary social-btn" href="https://www.linkedin.com/in/md-rasel-ahmed-290106b3/" target="_blank"
-          rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.75-2-5.5-4.7-5.5a4.06 4.06 0 0 0-3.65 2.02V8.5H9.15V21h3.5v-6.2c0-1.64.3-3.23 2.35-3.23 2.02 0 2.05 1.88 2.05 3.34V21H21v-7.15Z" />
-          </svg>
-        </a>
-        <a class="btn social-btn" href="https://github.com/raselahmedit09" target="_blank" rel="noopener"
-          aria-label="GitHub" title="GitHub">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M12 2.5a9.5 9.5 0 0 0-3 18.51c.48.09.65-.21.65-.46v-1.7c-2.65.58-3.21-1.12-3.21-1.12-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.97 1.45.97.85 1.45 2.22 1.03 2.76.78.09-.61.33-1.03.6-1.27-2.12-.24-4.35-1.06-4.35-4.7 0-1.04.37-1.89.97-2.56-.1-.24-.42-1.21.09-2.52 0 0 .79-.25 2.6.98a9.05 9.05 0 0 1 4.74 0c1.81-1.23 2.6-.98 2.6-.98.51 1.31.19 2.28.09 2.52.6.67.97 1.52.97 2.56 0 3.65-2.23 4.46-4.36 4.7.34.29.64.85.64 1.72v2.55c0 .25.17.55.65.46A9.5 9.5 0 0 0 12 2.5Z" />
-          </svg>
-        </a>
-        <a class="btn social-btn" href="https://leetcode.com/u/rasel_mbstu/" target="_blank" rel="noopener"
-          aria-label="LeetCode" title="LeetCode"><span class="social-mark" aria-hidden="true">&lt;/&gt;</span></a>
-        <!-- Add your CV: put resume.pdf in this repo, then remove the comment markers below -->
-        <!-- <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download CV</a> -->
+
+      <div class="hero-grid">
+
+        <div>
+
+          <span class="eyebrow">
+            Dhaka, Bangladesh · Team Lead · Full-Stack Engineering
+          </span>
+
+          <h1>Md. Rasel Ahmed</h1>
+
+          <p class="headline">
+            <strong>Team Lead &amp; Full-Stack Software Engineer</strong>
+            helping teams design, build and evolve enterprise software
+            platforms.
+          </p>
+
+          <p class="specialties">
+            C# · ASP.NET Core · Angular · SQL Server · Microservices ·
+            Micro-Frontends · Cloud · Architecture · AI-assisted Engineering
+          </p>
+
+          <p class="summary">
+            13+ years of software engineering experience across enterprise
+            applications, APIs, distributed systems and modern web platforms.
+            I combine <strong>technical leadership</strong>,
+            <strong>hands-on development</strong>, architecture and
+            developer mentoring to deliver maintainable software.
+          </p>
+
+          <div class="cta">
+
+            <a class="btn primary social-btn" href="https://www.linkedin.com/in/md-rasel-ahmed-290106b3/"
+              target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.75-2-5.5-4.7-5.5a4.06 4.06 0 0 0-3.65 2.02V8.5H9.15V21h3.5v-6.2c0-1.64.3-3.23 2.35-3.23 2.02 0 2.05 1.88 2.05 3.34V21H21v-7.15Z" />
+              </svg>
+
+            </a>
+
+            <a class="btn social-btn" href="https://github.com/raselahmedit09" target="_blank" rel="noopener"
+              aria-label="GitHub" title="GitHub">
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2.5a9.5 9.5 0 0 0-3 18.51c.48.09.65-.21.65-.46v-1.7c-2.65.58-3.21-1.12-3.21-1.12-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.97 1.45.97.85 1.45 2.22 1.03 2.76.78.09-.61.33-1.03.6-1.27-2.12-.24-4.35-1.06-4.35-4.7 0-1.04.37-1.89.97-2.56-.1-.24-.42-1.21.09-2.52 0 0 .79-.25 2.6.98a9.05 9.05 0 0 1 4.74 0c1.81-1.23 2.6-.98 2.6-.98.51 1.31.19 2.28.09 2.52.34.29.64.85.64 1.72v2.55c0 .25.17.55.65.46A9.5 9.5 0 0 0 12 2.5Z" />
+              </svg>
+
+            </a>
+
+            <a class="btn social-btn" href="https://leetcode.com/u/rasel_mbstu/" target="_blank" rel="noopener"
+              aria-label="LeetCode" title="LeetCode">
+
+              <span class="social-mark" aria-hidden="true">
+                &lt;/&gt;
+              </span>
+
+            </a>
+
+            <!-- Add resume.pdf to the repository to enable this button -->
+
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">
+              Download CV
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+          <img class="profile-photo" src="profile.jpg" alt="Portrait of Md. Rasel Ahmed" width="200" height="245">
+        </div>
+
       </div>
+
+
       <div class="stats">
-        <div class="stat"><b>13+</b><span>years building software</span></div>
-        <div class="stat"><b>3</b><span>RK.Web projects led</span></div>
-        <div class="stat"><b>30+</b><span>shared UI components delivered</span></div>
-        <div class="stat"><b>6</b><span>earlier projects as team member</span></div>
+
+        <div class="stat">
+          <b>13+</b>
+          <span>years of software engineering</span>
+        </div>
+
+        <div class="stat">
+          <b>3</b>
+          <span>RK.Web areas led</span>
+        </div>
+
+        <div class="stat">
+          <b>30+</b>
+          <span>shared UI components</span>
+        </div>
+
+        <div class="stat">
+          <b>3</b>
+          <span>major engineering disciplines: FE · BE · Architecture</span>
+        </div>
+
       </div>
+
     </div>
+
   </header>
 
+
+  <!-- About -->
+
   <section id="about">
+
     <div class="wrap">
+
+      <div class="section-kicker">Profile</div>
+
       <h2>About</h2>
-      <p class="lead">At <strong>DataPath Ltd.</strong>, I lead the technical direction of the RK.Web platform,
-        covering software architecture, technical design, implementation, code quality, performance and mentoring. On
-        the frontend, I work with Angular Standalone Components, Micro Frontends, Module Federation, component
-        libraries, shared libraries and reusable UI patterns that support independent development across teams.</p>
-      <p class="lead">On the backend, I work with ASP.NET Core, REST APIs, Clean Architecture, Domain-Driven Design,
-        CQRS, Microservices, distributed systems, authentication, caching and SQL Server.</p>
-      <p class="lead">I also actively practice <strong>AI-assisted software engineering</strong>, using tools such as
-        <strong>Claude and other AI coding assistants</strong> for code generation, refactoring, debugging,
-        architecture exploration, documentation and rapid prototyping. I focus on combining AI-assisted development
-        with engineering principles, code review, testing and architectural discipline rather than treating AI-generated
-        code as a replacement for engineering judgment.
+
+      <p class="lead">
+        I am a Team Lead and Full-Stack Software Engineer with 13+ years of
+        experience designing and delivering enterprise software platforms.
+        My core engineering background spans C#, ASP.NET Core, Angular,
+        SQL Server and Java.
       </p>
-      <p class="lead">Earlier in my career at DataPath, I contributed to the <strong>Unify.Backend</strong> platform,
-        working on business modules, API services and Windows service applications. I enjoy exploring modern software
-        engineering practices, AI-native development workflows and scalable architecture while helping teams adopt
-        practical, maintainable and future-ready solutions.</p>
+
+      <p class="lead">
+        At <strong>DataPath Ltd.</strong>, I lead the technical direction of
+        the RK.Web platform across <strong>RK.Web.Client</strong>,
+        <strong>RK.Web.Backend</strong> and <strong>RK.Web.Lib</strong>.
+        My responsibilities include architecture, technical design,
+        implementation, code quality, performance, mentoring and
+        cross-team technical collaboration.
+      </p>
+
+      <p class="lead">
+        On the frontend, I work with Angular standalone components,
+        micro-frontends, Native / Module Federation, reusable component
+        libraries and shared engineering patterns. On the backend, I work
+        with ASP.NET Core, REST APIs, Clean Architecture, CQRS,
+        microservices, authentication, caching and SQL Server.
+      </p>
+
+      <p class="lead">
+        I also actively practice <strong>AI-assisted software engineering</strong>,
+        using tools such as Claude and other AI coding assistants for
+        architecture exploration, implementation, refactoring, debugging,
+        documentation and rapid prototyping.
+      </p>
+
+      <p class="lead">
+        My approach is to use AI to increase engineering leverage while
+        keeping architecture, security, testing, code review and engineering
+        judgment at the center of the development process.
+      </p>
+
     </div>
+
   </section>
+
+
+  <!-- Leadership -->
+
+  <section id="leadership">
+
+    <div class="wrap">
+
+      <div class="section-kicker">Engineering Leadership</div>
+
+      <h2>Leadership &amp; Engineering Practices</h2>
+
+      <p class="lead">
+        As a Team Lead, I focus on both technical execution and team
+        development — helping engineers solve complex problems while
+        maintaining engineering quality, delivery discipline and
+        architectural consistency.
+      </p>
+
+
+      <div class="leadership-grid">
+
+        <div class="card lead-card">
+
+          <h3>Technical Leadership</h3>
+
+          <ul class="check">
+            <li>Guide architecture and technical design decisions.</li>
+            <li>Evaluate implementation approaches before development.</li>
+            <li>Maintain consistency across frontend, backend and shared libraries.</li>
+            <li>Identify technical risks and propose practical solutions.</li>
+            <li>Balance delivery needs with long-term maintainability.</li>
+          </ul>
+
+        </div>
+
+
+        <div class="card lead-card">
+
+          <h3>People &amp; Mentoring</h3>
+
+          <ul class="check">
+            <li>Mentor developers through code reviews and technical discussions.</li>
+            <li>Help developers break complex problems into manageable tasks.</li>
+            <li>Encourage knowledge sharing and continuous learning.</li>
+            <li>Support engineers in improving code quality and engineering practices.</li>
+            <li>Help team members understand both the problem and the technical context.</li>
+          </ul>
+
+        </div>
+
+
+        <div class="card lead-card">
+
+          <h3>Delivery &amp; Collaboration</h3>
+
+          <ul class="check">
+            <li>Coordinate technical work across multiple development areas.</li>
+            <li>Collaborate with product, QA, architecture and engineering teams.</li>
+            <li>Support sprint planning, estimation and technical prioritization.</li>
+            <li>Break larger requirements into implementable technical work.</li>
+            <li>Identify dependencies and integration risks early.</li>
+          </ul>
+
+        </div>
+
+
+        <div class="card lead-card">
+
+          <h3>Engineering Quality</h3>
+
+          <ul class="check">
+            <li>Promote SOLID and maintainable design principles.</li>
+            <li>Encourage meaningful code reviews and testing.</li>
+            <li>Promote reusable components and shared libraries.</li>
+            <li>Improve development standards and documentation.</li>
+            <li>Use practical engineering principles rather than unnecessary complexity.</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="philosophy">
+
+        <div class="philosophy-step">
+          <b>01 · Clarify</b>
+          <span>Understand requirements, constraints and risks.</span>
+        </div>
+
+        <div class="philosophy-step">
+          <b>02 · Design</b>
+          <span>Evaluate architecture and implementation options.</span>
+        </div>
+
+        <div class="philosophy-step">
+          <b>03 · Enable</b>
+          <span>Help engineers understand problems and own solutions.</span>
+        </div>
+
+        <div class="philosophy-step">
+          <b>04 · Review</b>
+          <span>Maintain quality through review, testing and feedback.</span>
+        </div>
+
+        <div class="philosophy-step">
+          <b>05 · Improve</b>
+          <span>Continuously improve architecture and engineering practices.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Current Focus -->
+
+  <section id="focus">
+
+    <div class="wrap">
+
+      <div class="section-kicker">Professional Direction</div>
+
+      <h2>Current Focus</h2>
+
+      <p class="lead">
+        Areas I am actively exploring and applying as software engineering
+        continues to evolve.
+      </p>
+
+
+      <div class="focus-grid">
+
+        <div class="card focus-card">
+          <h3>AI-Assisted Engineering</h3>
+          <p>
+            AI coding assistants, AI-native SDLC workflows, architecture
+            exploration and developer productivity.
+          </p>
+        </div>
+
+        <div class="card focus-card">
+          <h3>Cloud-Native .NET</h3>
+          <p>
+            Microservices, containers, distributed systems, AKS,
+            observability and scalable backend platforms.
+          </p>
+        </div>
+
+        <div class="card focus-card">
+          <h3>Modern Angular</h3>
+          <p>
+            Standalone components, micro-frontends, reusable component
+            libraries and scalable frontend architecture.
+          </p>
+        </div>
+
+        <div class="card focus-card">
+          <h3>Engineering Leadership</h3>
+          <p>
+            Mentoring, architecture decisions, technical communication,
+            developer enablement and engineering quality.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Technical Stack -->
 
   <section id="stack">
+
     <div class="wrap">
-      <h2>Technical stack</h2>
-      <p class="lead">The technologies, delivery practices and engineering habits I use to move enterprise software
-        from a shared contract to a maintainable production system.</p>
+
+      <div class="section-kicker">Technology</div>
+
+      <h2>Technical Stack</h2>
+
+      <p class="lead">
+        Technologies, architecture practices and engineering tools I use
+        to move enterprise software from shared contracts to maintainable
+        production systems.
+      </p>
+
+
       <div class="skills">
+
         <div class="card">
           <h3>Backend</h3>
+
           <div class="tags">
-            <span class="tag">RK.Web.Backend</span><span class="tag">C#</span><span class="tag">.NET 8</span><span
-              class="tag">ASP.NET Core Web API</span>
-            <span class="tag">EF Core</span><span class="tag">Dapper</span><span class="tag">MediatR</span>
-            <span class="tag">FluentValidation</span><span class="tag">AutoMapper</span><span class="tag">Serilog</span>
-            <span class="tag">WCF</span><span class="tag">Windows Services</span>
+            <span class="tag">C#</span>
+            <span class="tag">.NET 8</span>
+            <span class="tag">ASP.NET Core Web API</span>
+            <span class="tag">EF Core</span>
+            <span class="tag">Dapper</span>
+            <span class="tag">MediatR</span>
+            <span class="tag">FluentValidation</span>
+            <span class="tag">Serilog</span>
+            <span class="tag">WCF</span>
+            <span class="tag">Windows Services</span>
           </div>
         </div>
+
+
         <div class="card">
           <h3>Frontend</h3>
+
           <div class="tags">
-            <span class="tag">RK.Web.Client</span><span class="tag">Angular 21</span><span
-              class="tag">TypeScript</span><span class="tag">RxJS</span>
-            <span class="tag">Micro-Frontends</span><span class="tag">Native / Module Federation</span>
-            <span class="tag">SCSS</span><span class="tag">Component Libraries</span>
+            <span class="tag">Angular</span>
+            <span class="tag">Angular Standalone</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">RxJS</span>
+            <span class="tag">Micro-Frontends</span>
+            <span class="tag">Native Federation</span>
+            <span class="tag">SCSS</span>
+            <span class="tag">Component Libraries</span>
           </div>
         </div>
+
+
         <div class="card">
           <h3>Architecture</h3>
+
           <div class="tags">
-            <span class="tag">RK.Web.Lib</span><span class="tag">Microservices</span><span class="tag">Clean
-              Architecture</span><span class="tag">CQRS</span>
-            <span class="tag">SOLID</span><span class="tag">Repository / Unit of Work</span><span class="tag">OpenAPI
-              contract-first</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">Clean Architecture</span>
+            <span class="tag">DDD</span>
+            <span class="tag">CQRS</span>
+            <span class="tag">SOLID</span>
+            <span class="tag">Dependency Injection</span>
+            <span class="tag">OpenAPI</span>
+            <span class="tag">Contract-First</span>
           </div>
         </div>
+
+
         <div class="card">
           <h3>Data &amp; Security</h3>
+
           <div class="tags">
-            <span class="tag">SQL Server</span><span class="tag">Oracle</span><span class="tag">MongoDB</span>
-            <span class="tag">Azure Entra ID / MSAL</span><span class="tag">JWT / OAuth 2.0</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Entra ID</span>
+            <span class="tag">MSAL</span>
+            <span class="tag">JWT</span>
+            <span class="tag">OAuth 2.0</span>
+            <span class="tag">Redis</span>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <h3>Cloud &amp; DevOps</h3>
+
+          <div class="tags">
+            <span class="tag">Azure</span>
+            <span class="tag">AKS</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Azure DevOps</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Static Web Apps</span>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <h3>Observability</h3>
+
+          <div class="tags">
+            <span class="tag">Serilog</span>
+            <span class="tag">Structured Logging</span>
             <span class="tag">Prometheus</span>
+            <span class="tag">Application Monitoring</span>
+            <span class="tag">API Diagnostics</span>
           </div>
         </div>
+
+
         <div class="card">
-          <h3>DevOps &amp; Cloud</h3>
+          <h3>Engineering Practices</h3>
+
           <div class="tags">
-            <span class="tag">Azure Static Web Apps</span><span class="tag">GitHub Actions (CI/CD)</span>
-            <span class="tag">Multi-environment pipelines</span><span class="tag">OpenAPI Generator CLI</span>
-            <span class="tag">Docker</span><span class="tag">AKS</span><span class="tag">Azure DevOps</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Practices</h3>
-          <div class="tags">
-            <span class="tag">SOLID</span><span class="tag">Repository &amp; Service Layer</span>
-            <span class="tag">Dependency Injection</span><span class="tag">Code review</span>
+            <span class="tag">Code Review</span>
             <span class="tag">Agile / Scrum</span>
+            <span class="tag">Technical Design</span>
+            <span class="tag">Mentoring</span>
+            <span class="tag">Refactoring</span>
+            <span class="tag">Testing</span>
+            <span class="tag">Documentation</span>
           </div>
         </div>
+
+
         <div class="card">
           <h3>Tools</h3>
+
           <div class="tags">
-            <span class="tag">Git / TFS</span><span class="tag">Azure DevOps</span><span class="tag">Jira</span>
-            <span class="tag">Swagger</span><span class="tag">NSwag</span><span class="tag">OpenAPI</span>
+            <span class="tag">Git</span>
+            <span class="tag">TFS</span>
+            <span class="tag">Jira</span>
+            <span class="tag">Swagger</span>
+            <span class="tag">NSwag</span>
+            <span class="tag">OpenAPI Generator</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Visual Studio</span>
           </div>
         </div>
-        <div class="card">
-          <h3>SQL Engineering</h3>
-          <div class="tags">
-            <span class="tag">Microsoft SQL Server</span><span class="tag">Stored Procedures</span>
-            <span class="tag">Query optimization</span><span class="tag">Schema design</span>
-          </div>
-        </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <section id="work">
+
+  <!-- Architecture Decisions -->
+
+  <section id="architecture">
+
     <div class="wrap">
-      <h2>Featured work</h2>
-      <p class="lead">Current team-lead scope at DataPath Ltd.: coordinating RK.Web.Client, RK.Web.Backend and
-        RK.Web.Lib for a retirement-plan platform serving participants, sponsors and advisors.</p>
+
+      <div class="section-kicker">Technical Leadership</div>
+
+      <h2>Architecture &amp; Technical Decisions</h2>
+
+      <p class="lead">
+        I focus not only on which technology to use, but also on the
+        engineering problem it solves and the trade-offs behind the decision.
+      </p>
+
+
+      <div class="decisions">
+
+        <div class="decision">
+          <strong>Micro-frontends</strong>
+          <span>Independent application ownership and deployment.</span>
+          <span class="approach">Angular micro-frontends with shared libraries.</span>
+        </div>
+
+        <div class="decision">
+          <strong>Shared UI Library</strong>
+          <span>Consistent UX and reduced duplicated implementation.</span>
+          <span class="approach">Reusable versioned component packages.</span>
+        </div>
+
+        <div class="decision">
+          <strong>Microservices</strong>
+          <span>Separate business capabilities and service boundaries.</span>
+          <span class="approach">Independent .NET backend services.</span>
+        </div>
+
+        <div class="decision">
+          <strong>Clean Architecture</strong>
+          <span>Maintainability and separation of responsibilities.</span>
+          <span class="approach">Domain, application, infrastructure and API boundaries.</span>
+        </div>
+
+        <div class="decision">
+          <strong>CQRS</strong>
+          <span>Separate read and write application workflows.</span>
+          <span class="approach">Commands and queries using MediatR.</span>
+        </div>
+
+        <div class="decision">
+          <strong>OpenAPI</strong>
+          <span>Reliable frontend/backend API contracts.</span>
+          <span class="approach">Generated TypeScript clients from API definitions.</span>
+        </div>
+
+        <div class="decision">
+          <strong>Bearer Authentication</strong>
+          <span>Authentication across distributed applications.</span>
+          <span class="approach">JWT access tokens with refresh-token rotation.</span>
+        </div>
+
+        <div class="decision">
+          <strong>Reusable Engineering</strong>
+          <span>Reduce duplicated solutions across teams.</span>
+          <span class="approach">Shared libraries, components and common patterns.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AI Engineering -->
+
+  <section id="ai">
+
+    <div class="wrap">
+
+      <div class="section-kicker">Future of Development</div>
+
+      <h2>AI-Assisted Software Engineering</h2>
+
+      <p class="lead">
+        I use AI coding assistants as engineering tools to increase
+        development leverage — while keeping architecture, security,
+        testing and engineering judgment at the center of the process.
+      </p>
+
+
+      <div class="ai-box">
+
+        <strong>
+          AI should accelerate engineering, not replace engineering judgment.
+        </strong>
+
+        <div class="ai-grid">
+
+          <div class="ai-item">
+            <b>Explore</b>
+            <span>
+              Investigate architecture alternatives, APIs and unfamiliar
+              codebases.
+            </span>
+          </div>
+
+          <div class="ai-item">
+            <b>Build</b>
+            <span>
+              Generate initial implementations, scaffolding and repetitive
+              development work.
+            </span>
+          </div>
+
+          <div class="ai-item">
+            <b>Refactor</b>
+            <span>
+              Explore cleaner designs and improve existing implementations.
+            </span>
+          </div>
+
+          <div class="ai-item">
+            <b>Debug</b>
+            <span>
+              Investigate errors, edge cases and complex implementation
+              problems.
+            </span>
+          </div>
+
+          <div class="ai-item">
+            <b>Document</b>
+            <span>
+              Accelerate technical documentation, examples and development
+              guides.
+            </span>
+          </div>
+
+          <div class="ai-item">
+            <b>Review</b>
+            <span>
+              Validate AI-generated code through engineering principles,
+              testing, security and code review.
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+          <strong>Engineering principle:</strong>
+          AI-generated code is treated as an implementation proposal.
+          It still requires human review, testing, architectural validation
+          and ownership.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Featured Work -->
+
+  <section id="work">
+
+    <div class="wrap">
+
+      <div class="section-kicker">Current Work</div>
+
+      <h2>Featured Work</h2>
+
+      <p class="lead">
+        Current Team Lead scope at DataPath Ltd., coordinating
+        RK.Web.Client, RK.Web.Backend and RK.Web.Lib for an enterprise
+        retirement-plan platform.
+      </p>
+
+
       <div class="case">
+
         <div class="card diagram">
+
           <svg viewBox="0 0 520 400" role="img"
-            aria-label="Architecture: three Angular micro-frontends call three .NET 8 microservices backed by SQL Server, with Azure Entra ID login and a shared UI library">
+            aria-label="RK.Web architecture showing Angular micro-frontends, .NET microservices, authentication and data services">
+
             <defs>
               <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"
                 orient="auto-start-reverse">
+
                 <path class="arrow" d="M0,0 L10,5 L0,10 z" />
+
               </marker>
             </defs>
 
-            <text class="lbl" x="10" y="18">ANGULAR 21 MICRO-FRONTENDS · NATIVE FEDERATION</text>
+
+            <text class="lbl" x="10" y="18">
+              ANGULAR MICRO-FRONTS · NATIVE FEDERATION
+            </text>
+
+
             <rect class="box fe" x="10" y="28" width="155" height="58" rx="10" />
-            <text x="87.5" y="53" text-anchor="middle">Auth app</text>
-            <text class="sub" x="87.5" y="71" text-anchor="middle">Login · Registration</text>
+
+            <text x="87.5" y="53" text-anchor="middle">
+              Auth app
+            </text>
+
+            <text class="sub" x="87.5" y="71" text-anchor="middle">
+              Login · Registration
+            </text>
+
+
             <rect class="box fe" x="182" y="28" width="155" height="58" rx="10" />
-            <text x="259.5" y="53" text-anchor="middle">Participant portal</text>
-            <text class="sub" x="259.5" y="71" text-anchor="middle">Dashboard · Accounts</text>
+
+            <text x="259.5" y="53" text-anchor="middle">
+              Participant portal
+            </text>
+
+            <text class="sub" x="259.5" y="71" text-anchor="middle">
+              Dashboard · Accounts
+            </text>
+
+
             <rect class="box fe" x="354" y="28" width="156" height="58" rx="10" />
-            <text x="432" y="53" text-anchor="middle">Sponsor / Advisor</text>
-            <text class="sub" x="432" y="71" text-anchor="middle">Plan management</text>
+
+            <text x="432" y="53" text-anchor="middle">
+              Sponsor / Advisor
+            </text>
+
+            <text class="sub" x="432" y="71" text-anchor="middle">
+              Plan management
+            </text>
+
 
             <rect class="box" x="10" y="98" width="500" height="34" rx="8" />
-            <text x="260" y="120" text-anchor="middle">Shared UI &amp; utility libraries · 30+ components · npm
-              packages</text>
+
+            <text x="260" y="120" text-anchor="middle">
+              Shared UI &amp; utility libraries · 30+ components · npm packages
+            </text>
+
 
             <rect class="box" x="10" y="160" width="140" height="54" rx="10" />
-            <text x="80" y="183" text-anchor="middle">Azure Entra ID</text>
-            <text class="sub" x="80" y="200" text-anchor="middle">External ID · MSAL</text>
+
+            <text x="80" y="183" text-anchor="middle">
+              Azure Entra ID
+            </text>
+
+            <text class="sub" x="80" y="200" text-anchor="middle">
+              External ID · MSAL
+            </text>
+
+
             <path class="line dash" d="M80 132 V158" marker-end="url(#ah)" />
 
+
             <path class="line" d="M87.5 132 V140 H300 V158" />
+
             <path class="line" d="M259.5 132 V158" marker-end="url(#ah)" />
+
             <path class="line" d="M432 132 V140 H300" />
+
+
             <rect class="box" x="175" y="160" width="335" height="54" rx="10" />
-            <text x="342.5" y="183" text-anchor="middle">Bearer JWT · refresh-token rotation</text>
-            <text class="sub" x="342.5" y="200" text-anchor="middle">Generated OpenAPI clients · AES-256 PII
-              encryption</text>
+
+            <text x="342.5" y="183" text-anchor="middle">
+              Bearer JWT · refresh-token rotation
+            </text>
+
+            <text class="sub" x="342.5" y="200" text-anchor="middle">
+              OpenAPI clients · AES-256 PII encryption
+            </text>
+
 
             <path class="line" d="M342.5 214 V232 H87.5 V256" marker-end="url(#ah)" />
-            <path class="line" d="M259.5 232 V256" marker-end="url(#ah)" />
-            <path class="line" d="M342.5 232 H432 V256" marker-end="url(#ah)" />
 
-            <text class="lbl" x="10" y="250">.NET 8 MICROSERVICES · CLEAN ARCHITECTURE + CQRS</text>
+            <path class="line" d="M259.5 232 V256" marker-end="url(#ah)" />
+
+            <path class="line" d="M342.5 232 H432 V256" />
+
+
+            <text class="lbl" x="10" y="250">
+              .NET MICROSERVICES · CLEAN ARCHITECTURE + CQRS
+            </text>
+
+
             <rect class="box be" x="10" y="258" width="155" height="58" rx="10" />
-            <text x="87.5" y="283" text-anchor="middle">Authentication</text>
-            <text class="sub" x="87.5" y="301" text-anchor="middle">Users · Invitations</text>
+
+            <text x="87.5" y="283" text-anchor="middle">
+              Authentication
+            </text>
+
+            <text class="sub" x="87.5" y="301" text-anchor="middle">
+              Users · Invitations
+            </text>
+
+
             <rect class="box be" x="182" y="258" width="155" height="58" rx="10" />
-            <text x="259.5" y="283" text-anchor="middle">Participant</text>
-            <text class="sub" x="259.5" y="301" text-anchor="middle">Participant data</text>
+
+            <text x="259.5" y="283" text-anchor="middle">
+              Participant
+            </text>
+
+            <text class="sub" x="259.5" y="301" text-anchor="middle">
+              Participant data
+            </text>
+
+
             <rect class="box be" x="354" y="258" width="156" height="58" rx="10" />
-            <text x="432" y="283" text-anchor="middle">PlanConnect</text>
-            <text class="sub" x="432" y="301" text-anchor="middle">Sponsor · Advisor</text>
+
+            <text x="432" y="283" text-anchor="middle">
+              PlanConnect
+            </text>
+
+            <text class="sub" x="432" y="301" text-anchor="middle">
+              Sponsor · Advisor
+            </text>
+
 
             <path class="line" d="M87.5 316 V344" marker-end="url(#ah)" />
+
             <path class="line" d="M259.5 316 V344" marker-end="url(#ah)" />
+
             <path class="line" d="M432 316 V344" marker-end="url(#ah)" />
+
+
             <rect class="box" x="10" y="346" width="240" height="44" rx="10" />
-            <text x="130" y="373" text-anchor="middle">SQL Server · EF Core</text>
+
+            <text x="130" y="373" text-anchor="middle">
+              SQL Server · EF Core
+            </text>
+
+
             <rect class="box" x="270" y="346" width="240" height="44" rx="10" />
-            <text x="390" y="373" text-anchor="middle">Core recordkeeping APIs</text>
+
+            <text x="390" y="373" text-anchor="middle">
+              Core recordkeeping APIs
+            </text>
+
           </svg>
+
         </div>
+
+
         <div class="card">
+
+          <div class="case-role">
+            TEAM LEAD · FULL-STACK · ARCHITECTURE
+          </div>
+
+          <h3>RK.Web Enterprise Platform</h3>
+
+          <p class="case-intro">
+            A modular enterprise platform connecting Angular applications,
+            .NET services, shared libraries and core recordkeeping APIs.
+          </p>
+
           <ul class="check">
-            <li><strong>Leadership:</strong> lead the development direction across RK.Web.Client, RK.Web.Backend and
-              RK.Web.Lib, helping the team keep frontend, backend and shared-library contracts aligned.</li>
-            <li><strong>Backend:</strong> three .NET 8 microservices using Clean Architecture and CQRS (MediatR), with
-              FluentValidation pipeline behaviours, Repository/Unit of Work and EF Core on SQL Server.</li>
-            <li><strong>Frontend:</strong> three independently deployable Angular 21 micro-frontends built from
-              standalone components.</li>
-            <li><strong>Design system:</strong> an in-house UI library of 30+ components (forms, modals, charts, grids,
-              tabs, wizards, PDF/Excel export), published as versioned packages.</li>
-            <li><strong>Security:</strong> Entra External ID login exchanged for a custom JWT session, with httpOnly
-              refresh-token rotation. Led the migration from cookie-based to bearer-token auth.</li>
-            <li><strong>PII protection:</strong> middleware that encrypts sensitive request parameters automatically
-              (AES-256), configured per service.</li>
-            <li><strong>Delivery:</strong> TypeScript clients generated from OpenAPI, Docker images deployed to AKS,
-              with Serilog and Prometheus for observability.</li>
+
+            <li>
+              <strong>Leadership:</strong>
+              lead development direction across RK.Web.Client,
+              RK.Web.Backend and RK.Web.Lib.
+            </li>
+
+            <li>
+              <strong>Backend:</strong>
+              .NET microservices using Clean Architecture and CQRS with
+              MediatR, FluentValidation, Repository / Unit of Work and EF Core.
+            </li>
+
+            <li>
+              <strong>Frontend:</strong>
+              independently deployable Angular micro-frontends built with
+              standalone components.
+            </li>
+
+            <li>
+              <strong>Design system:</strong>
+              in-house UI library containing 30+ reusable components and
+              shared utilities.
+            </li>
+
+            <li>
+              <strong>Security:</strong>
+              Entra External ID authentication integrated with JWT-based
+              application sessions and refresh-token rotation.
+            </li>
+
+            <li>
+              <strong>API contracts:</strong>
+              TypeScript clients generated from OpenAPI definitions.
+            </li>
+
+            <li>
+              <strong>Delivery:</strong>
+              containerized services and cloud deployment workflows with
+              observability through structured logging and metrics.
+            </li>
+
           </ul>
-          <p class="note">This is client work, so the source code is private. The diagram shows only the architecture.
+
+          <p class="note">
+            Client source code is private. The architecture shown here
+            intentionally contains only high-level technical information.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="case-study">
+
+        <div class="case-step">
+          <b>Challenge</b>
+          <p>
+            Build and evolve multiple enterprise applications while
+            maintaining consistency across teams.
           </p>
         </div>
+
+        <div class="case-step">
+          <b>Architecture</b>
+          <p>
+            Combine micro-frontends, shared libraries and independently
+            deployable backend services.
+          </p>
+        </div>
+
+        <div class="case-step">
+          <b>Leadership</b>
+          <p>
+            Coordinate technical decisions, implementation direction,
+            code quality and cross-team dependencies.
+          </p>
+        </div>
+
+        <div class="case-step">
+          <b>Outcome</b>
+          <p>
+            A modular engineering platform supporting independent application
+            development with shared technical foundations.
+          </p>
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- Projects -->
+
   <section id="projects">
+
     <div class="wrap">
-      <h2>Selected projects</h2>
-      <p class="lead">Private product work and public repositories that show how I apply the stack in production and
-        in the open.</p>
+
+      <div class="section-kicker">Open Source &amp; Learning</div>
+
+      <h2>Selected Projects</h2>
+
+      <p class="lead">
+        Public repositories demonstrating how I explore architecture,
+        .NET, Angular, microservices and software engineering practices.
+      </p>
+
+
       <div class="projects">
+
         <a class="card project" href="https://github.com/raselahmedit09/eshop-microservices-architecture"
           target="_blank" rel="noopener">
+
           <h3>eShop Microservices Architecture</h3>
-          <p>An e-commerce reference system split into independently deployable .NET microservices.</p>
-          <div class="meta"><span><i class="dot cs"></i>C#</span></div>
+
+          <p>
+            An e-commerce reference system split into independently
+            deployable .NET microservices.
+          </p>
+
+          <div class="meta">
+            <span><i class="dot cs"></i>C#</span>
+          </div>
+
         </a>
+
+
         <a class="card project"
           href="https://github.com/raselahmedit09/ASP.NET-Core-SOLID-and-Clean-Architecture-.NET-8" target="_blank"
           rel="noopener">
+
           <h3>ASP.NET Core SOLID &amp; Clean Architecture</h3>
-          <p>A .NET 8 template using Clean Architecture, SOLID principles and CQRS layering.</p>
-          <div class="meta"><span><i class="dot cs"></i>C#</span><span>★ 4</span></div>
+
+          <p>
+            A .NET 8 template exploring Clean Architecture, SOLID principles
+            and CQRS-oriented application design.
+          </p>
+
+          <div class="meta">
+            <span><i class="dot cs"></i>C#</span>
+            <span>★ 4</span>
+          </div>
+
         </a>
+
+
         <a class="card project" href="https://github.com/raselahmedit09/angular17-microfrontend" target="_blank"
           rel="noopener">
+
           <h3>Angular 17 Micro-Frontend</h3>
-          <p>Module Federation with Angular standalone components: a shell plus remotes.</p>
-          <div class="meta"><span><i class="dot ts"></i>TypeScript</span><span>★ 5</span></div>
+
+          <p>
+            Angular standalone components with Module Federation,
+            demonstrating a shell and remote application architecture.
+          </p>
+
+          <div class="meta">
+            <span><i class="dot ts"></i>TypeScript</span>
+            <span>★ 5</span>
+          </div>
+
         </a>
+
+
         <a class="card project" href="https://github.com/raselahmedit09/DapperWebApiDotNet8" target="_blank"
           rel="noopener">
+
           <h3>Dapper Web API (.NET 8)</h3>
-          <p>CRUD with Dapper in a .NET 8 Web API on SQL Server.</p>
-          <div class="meta"><span><i class="dot cs"></i>C#</span></div>
+
+          <p>
+            CRUD Web API demonstrating Dapper-based data access with
+            SQL Server.
+          </p>
+
+          <div class="meta">
+            <span><i class="dot cs"></i>C#</span>
+          </div>
+
         </a>
+
+
         <a class="card project"
           href="https://github.com/raselahmedit09/Windows-Service/tree/master/MyFirstWindowsService" target="_blank"
           rel="noopener">
+
           <h3>MyFirstWindowsService</h3>
-          <p>A C# Windows Service project with installer components, service lifecycle code and database operations.</p>
-          <div class="meta"><span><i class="dot cs"></i>C#</span><span>Windows Service</span></div>
+
+          <p>
+            C# Windows Service project covering service lifecycle,
+            installer components and database operations.
+          </p>
+
+          <div class="meta">
+            <span><i class="dot cs"></i>C#</span>
+            <span>Windows Service</span>
+          </div>
+
         </a>
+
+
         <a class="card project" href="https://github.com/raselahmedit09/Serilog-.net-8" target="_blank" rel="noopener">
+
           <h3>Serilog for .NET 8</h3>
-          <p>Structured logging set up with Serilog in a .NET 8 application.</p>
-          <div class="meta"><span><i class="dot cs"></i>C#</span></div>
+
+          <p>
+            Structured logging implementation using Serilog in a
+            .NET 8 application.
+          </p>
+
+          <div class="meta">
+            <span><i class="dot cs"></i>C#</span>
+          </div>
+
         </a>
+
+
         <a class="card project" href="https://github.com/raselahmedit09/ReadOffice365Mailbox" target="_blank"
           rel="noopener">
+
           <h3>Read Office 365 Mailbox</h3>
-          <p>Reads an Office 365 mailbox from C#.</p>
-          <div class="meta"><span><i class="dot cs"></i>C#</span><span>★ 2</span></div>
+
+          <p>
+            C# implementation for reading an Office 365 mailbox.
+          </p>
+
+          <div class="meta">
+            <span><i class="dot cs"></i>C#</span>
+            <span>★ 2</span>
+          </div>
+
         </a>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- Experience -->
 
   <section id="experience">
+
     <div class="wrap">
+
+      <div class="section-kicker">Career</div>
+
       <h2>Experience</h2>
-      <p class="lead">13+ years, from Java engineer and service-platform team member to Team Lead.</p>
+
+      <p class="lead">
+        13+ years of engineering experience, progressing from Java and
+        full-stack development into technical leadership.
+      </p>
+
+
       <div class="timeline">
+
         <div class="job current">
+
           <h3>DataPath Ltd. · Dhaka</h3>
-          <div class="when">Feb 2018 – Present</div>
-          <p class="roles">Lead Software Engineer (Jul 2024 –) · Senior Software Engineer (Jul 2021 – Jun 2024) ·
-            Software Engineer (Feb 2018 – Jun 2021)</p>
-          <p class="project-line"><strong>Current:</strong> RK.Web.Client · RK.Web.Backend · RK.Web.Lib</p>
+
+          <div class="when">
+            Feb 2018 – Present
+          </div>
+
+          <p class="roles">
+            <strong>Lead Software Engineer</strong>
+            (Jul 2024 – Present) ·
+            Senior Software Engineer
+            (Jul 2021 – Jun 2024) ·
+            Software Engineer
+            (Feb 2018 – Jun 2021)
+          </p>
+
+          <p class="project-line">
+            <strong>Current scope:</strong>
+            RK.Web.Client · RK.Web.Backend · RK.Web.Lib
+          </p>
+
           <ul>
-            <li>Lead full-stack delivery of a US retirement-plan platform: .NET 8 microservices with Angular 21
-              micro-frontends.</li>
-            <li>Current lead scope covers RK.Web.Client, RK.Web.Backend and RK.Web.Lib, including shared contracts,
-              reusable libraries and cross-team technical decisions.</li>
-            <li>Built and maintain the shared Angular component library used across all apps.</li>
-            <li>Designed hybrid Entra ID + JWT authentication and automatic PII encryption.</li>
-            <li>Earlier DataPath team-member work covered CensusMassDataService, CustodianTransImport, TPAManager,
-              Unify.Backend, Unify.Frontend and WindwardReportServer.</li>
-            <li>Worked on Windows service components and WCF-based service integrations within the Unify platform.</li>
-            <li>Created and maintained stored procedures, SQL Server schemas and query optimizations across enterprise
-              workflows.</li>
+
+            <li>
+              Lead full-stack delivery of an enterprise retirement-plan
+              platform using .NET backend services and Angular applications.
+            </li>
+
+            <li>
+              Lead technical direction across RK.Web.Client,
+              RK.Web.Backend and RK.Web.Lib.
+            </li>
+
+            <li>
+              Guide architecture, implementation approaches, code quality
+              and cross-team technical decisions.
+            </li>
+
+            <li>
+              Build and maintain shared Angular component libraries and
+              reusable frontend utilities.
+            </li>
+
+            <li>
+              Work with microservices, Clean Architecture, CQRS,
+              authentication, API contracts and SQL Server.
+            </li>
+
+            <li>
+              Mentor developers through technical discussions,
+              implementation guidance and code reviews.
+            </li>
+
+            <li>
+              Earlier DataPath work covered CensusMassDataService,
+              CustodianTransImport, TPAManager, Unify.Backend,
+              Unify.Frontend and WindwardReportServer.
+            </li>
+
+            <li>
+              Worked on Windows services and WCF-based service integrations
+              within the Unify platform.
+            </li>
+
+            <li>
+              Created and maintained SQL Server stored procedures,
+              schemas and query optimizations across enterprise workflows.
+            </li>
+
           </ul>
+
         </div>
+
+
         <div class="job">
+
           <h3>Next IT Ltd · Banani, Dhaka</h3>
-          <div class="when">Jun 2015 – Jan 2018</div>
-          <p class="roles">Software Engineer</p>
+
+          <div class="when">
+            Jun 2015 – Jan 2018
+          </div>
+
+          <p class="roles">
+            Software Engineer
+          </p>
+
           <ul>
-            <li>Built a Garments Accessories ERP covering 8 modules (Merchandising, Production, Inventory, LC, Finance,
-              HR &amp; Payroll) with ASP.NET Web API, AngularJS and SQL Server.</li>
-            <li>Built a Project File Service using Node.js, AngularJS and MongoDB.</li>
+
+            <li>
+              Built a Garments Accessories ERP covering eight modules
+              including Merchandising, Production, Inventory, LC,
+              Finance, HR and Payroll.
+            </li>
+
+            <li>
+              Used ASP.NET Web API, AngularJS and SQL Server.
+            </li>
+
+            <li>
+              Built a Project File Service using Node.js, AngularJS
+              and MongoDB.
+            </li>
+
           </ul>
+
         </div>
+
+
         <div class="job">
+
           <h3>ATI Limited · Uttara, Dhaka</h3>
-          <div class="when">Nov 2013 – May 2015</div>
-          <p class="roles">Java Software Engineer</p>
+
+          <div class="when">
+            Nov 2013 – May 2015
+          </div>
+
+          <p class="roles">
+            Java Software Engineer
+          </p>
+
           <ul>
-            <li>Built a Hospital Scheduling &amp; Rostering system and an online/offline School Management System (J2EE,
-              Struts2, Oracle, Java Swing).</li>
+
+            <li>
+              Built a Hospital Scheduling &amp; Rostering system.
+            </li>
+
+            <li>
+              Worked on an online/offline School Management System.
+            </li>
+
+            <li>
+              Technologies included J2EE, Struts2, Oracle and Java Swing.
+            </li>
+
           </ul>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- Education -->
 
   <section id="education">
+
     <div class="wrap">
+
+      <div class="section-kicker">Education</div>
+
       <h2>Education</h2>
-      <div class="timeline">
-        <div class="job">
-          <h3>Mawlana Bhashani Science &amp; Technology University</h3>
-          <div class="when">Apr 2009 – Sep 2013</div>
-          <p class="roles">B.Sc. (Engg.), Information and Communication Technology</p>
-          <p class="roles">GPA: 3.13 / 4.00</p>
+
+      <div class="card education-card">
+
+        <h3>
+          Mawlana Bhashani Science &amp; Technology University
+        </h3>
+
+        <div class="when">
+          Apr 2009 – Sep 2013
         </div>
+
+        <p class="roles">
+          B.Sc. (Engg.), Information and Communication Technology
+        </p>
+
+        <p class="roles">
+          GPA: 3.13 / 4.00
+        </p>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- Contact -->
+
   <section id="contact">
+
     <div class="wrap">
-      <h2>Get in touch</h2>
-      <p class="lead">Open to conversations about senior, lead and architect roles in .NET and Angular.</p>
+
+      <div class="section-kicker">Let's Connect</div>
+
+      <h2>Get in Touch</h2>
+
+      <p class="lead">
+        Open to conversations about Team Lead, Senior Engineering,
+        Software Architecture and full-stack engineering opportunities.
+      </p>
+
+
       <div class="contact">
-        <a class="btn" href="tel:+8801727955518">+880 1727-955518</a>
-        <a class="btn primary" href="mailto:rasel.ict09@gmail.com">Email me</a>
+
+        <a class="btn" href="tel:+8801727955518">
+          +880 1727-955518
+        </a>
+
+        <a class="btn primary" href="mailto:rasel.ict09@gmail.com">
+          Email me
+        </a>
+
         <a class="btn social-btn" href="https://www.linkedin.com/in/md-rasel-ahmed-290106b3/" target="_blank"
           rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M6.5 8.5H3V21h3.5V8.5ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.85c0-3.75-2-5.5-4.7-5.5a4.06 4.06 0 0 0-3.65 2.02V8.5H9.15V21h3.5v-6.2c0-1.64.3-3.23 2.35-3.23 2.02 0 2.05 1.88 2.05 3.34V21H21v-7.15Z" />
           </svg>
+
         </a>
+
         <a class="btn social-btn" href="https://github.com/raselahmedit09" target="_blank" rel="noopener"
           aria-label="GitHub" title="GitHub">
+
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
-              d="M12 2.5a9.5 9.5 0 0 0-3 18.51c.48.09.65-.21.65-.46v-1.7c-2.65.58-3.21-1.12-3.21-1.12-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.97 1.45.97.85 1.45 2.22 1.03 2.76.78.09-.61.33-1.03.6-1.27-2.12-.24-4.35-1.06-4.35-4.7 0-1.04.37-1.89.97-2.56-.1-.24-.42-1.21.09-2.52 0 0 .79-.25 2.6.98a9.05 9.05 0 0 1 4.74 0c1.81-1.23 2.6-.98 2.6-.98.51 1.31.19 2.28.09 2.52.6.67.97 1.52.97 2.56 0 3.65-2.23 4.46-4.36 4.7.34.29.64.85.64 1.72v2.55c0 .25.17.55.65.46A9.5 9.5 0 0 0 12 2.5Z" />
+              d="M12 2.5a9.5 9.5 0 0 0-3 18.51c.48.09.65-.21.65-.46v-1.7c-2.65.58-3.21-1.12-3.21-1.12-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.97 1.45.97.85 1.45 2.22 1.03 2.76.78.09-.61.33-1.03.6-1.27-2.12-.24-4.35-1.06-4.35-4.7 0-1.04.37-1.89.97-2.56.34.29.64.85.64 1.72v2.55c0 .25.17.55.65.46A9.5 9.5 0 0 0 12 2.5Z" />
           </svg>
+
         </a>
+
         <a class="btn social-btn" href="https://leetcode.com/u/rasel_mbstu/" target="_blank" rel="noopener"
-          aria-label="LeetCode" title="LeetCode"><span class="social-mark" aria-hidden="true">&lt;/&gt;</span></a>
+          aria-label="LeetCode" title="LeetCode">
+
+          <span class="social-mark" aria-hidden="true">
+            &lt;/&gt;
+          </span>
+
+        </a>
+
       </div>
 
+
+      <p class="contact-email">
+        <a href="mailto:rasel.ict09@gmail.com">
+          rasel.ict09@gmail.com
+        </a>
+      </p>
+
+
       <form class="contact-form" action="mailto:rasel.ict09@gmail.com" method="post" enctype="text/plain">
-        <label class="sr-only" for="contact-email">Your email</label>
+
+        <label class="sr-only" for="contact-email">
+          Your email
+        </label>
+
         <input id="contact-email" name="email" type="email" placeholder="Your Email" autocomplete="email" required>
-        <label class="sr-only" for="contact-message">Your message</label>
+
+
+        <label class="sr-only" for="contact-message">
+          Your message
+        </label>
+
         <textarea id="contact-message" name="message" placeholder="Your message" required></textarea>
-        <button class="btn primary" type="submit">Send message</button>
+
+
+        <button class="btn primary" type="submit">
+          Send message
+        </button>
+
       </form>
+
     </div>
+
   </section>
 
+
+  <!-- Footer -->
+
   <footer>
-    <div class="wrap">© <span id="yr"></span> Md. Rasel Ahmed · Hosted on GitHub Pages</div>
+
+    <div class="wrap">
+      © <span id="yr"></span>
+      Md. Rasel Ahmed · Hosted on GitHub Pages
+    </div>
+
   </footer>
 
+
+  <!-- Scripts -->
+
   <script>
+
     (function () {
+
       var root = document.documentElement;
-      try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) { }
-      document.getElementById('themeBtn').addEventListener('click', function () {
-        var current = root.getAttribute('data-theme') ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        var next = current === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        try { localStorage.setItem('theme', next); } catch (e) { }
-      });
-      document.getElementById('yr').textContent = new Date().getFullYear();
+      var themeBtn = document.getElementById('themeBtn');
+
+      try {
+
+        var saved =
+          localStorage.getItem('theme');
+
+        if (saved) {
+          root.setAttribute(
+            'data-theme',
+            saved
+          );
+        }
+
+      } catch (e) {
+        // Ignore storage errors.
+      }
+
+
+      themeBtn.addEventListener(
+        'click',
+        function () {
+
+          var current =
+            root.getAttribute('data-theme') ||
+            (
+              window.matchMedia(
+                '(prefers-color-scheme: dark)'
+              ).matches
+                ? 'dark'
+                : 'light'
+            );
+
+          var next =
+            current === 'dark'
+              ? 'light'
+              : 'dark';
+
+          root.setAttribute(
+            'data-theme',
+            next
+          );
+
+          try {
+
+            localStorage.setItem(
+              'theme',
+              next
+            );
+
+          } catch (e) {
+            // Ignore storage errors.
+          }
+
+        }
+      );
+
+
+      document.getElementById(
+        'yr'
+      ).textContent =
+        new Date().getFullYear();
+
     })();
+
   </script>
+
 </body>
 
 </html>
+```
