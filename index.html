@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md. Rasel Ahmed</title>
+  <meta name="description"
+    content="Md. Rasel Ahmed — Lead Software Engineer and Full Stack Developer specialising in C#, ASP.NET Core, Angular, SQL Server, microservices and micro-frontends.">
+  <meta property="og:title" content="Md. Rasel Ahmed — Lead Software Engineer">
+  <meta property="og:description"
+    content="13+ years building enterprise web platforms with .NET, Angular and SQL Server.">
+  <meta property="og:url" content="https://raselahmedit09.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --surface: #ffffff;
+      --surface-2: #eef1f7;
+      --text: #141824;
+      --text-muted: #5a6275;
+      --border: #dde2ec;
+      --accent: #2f5bea;
+      --accent-soft: #e4ebff;
+      --accent-2: #0f9d7a;
+      --shadow: 0 1px 2px rgba(20, 24, 36, .05), 0 4px 16px rgba(20, 24, 36, .06);
+      --radius: 14px;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+      color-scheme: light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0d1017;
+        --surface: #151a24;
+        --surface-2: #1c2230;
+        --text: #e8ebf2;
+        --text-muted: #9aa3b5;
+        --border: #2a3142;
+        --accent: #7c9cff;
+        --accent-soft: #1f2a4a;
+        --accent-2: #3fd0a8;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+        color-scheme: dark;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0d1017;
+      --surface: #151a24;
+      --surface-2: #1c2230;
+      --text: #e8ebf2;
+      --text-muted: #9aa3b5;
+      --border: #2a3142;
+      --accent: #7c9cff;
+      --accent-soft: #1f2a4a;
+      --accent-2: #3fd0a8;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav .wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 60px;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.01em;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .theme-btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .theme-btn {
+        margin-left: auto;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 72px 0 56px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font: 500 13px var(--mono);
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 54px);
+      line-height: 1.1;
+      margin: 0 0 14px;
+      letter-spacing: -.02em;
+    }
+
+    .hero .role {
+      font-size: clamp(18px, 2.6vw, 22px);
+      color: var(--text-muted);
+      margin: 0 0 22px;
+      max-width: 760px;
+    }
+
+    .hero .role strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow);
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 26px;
+      letter-spacing: -.02em;
+    }
+
+    .stat span {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Sections */
+    section {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      letter-spacing: -.01em;
+    }
+
+    .lead {
+      color: var(--text-muted);
+      margin: 0 0 28px;
+      max-width: 720px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+
+    .skills h3 {
+      margin: 0 0 12px;
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 12.5px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    /* Case study */
+    .case {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    @media (max-width: 860px) {
+      .case {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .diagram svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .diagram .box {
+      fill: var(--surface-2);
+      stroke: var(--border);
+    }
+
+    .diagram .box.fe {
+      fill: var(--accent-soft);
+      stroke: var(--accent);
+    }
+
+    .diagram .box.be {
+      stroke: var(--accent-2);
+    }
+
+    .diagram text {
+      fill: var(--text);
+      font: 600 12px 'Inter', sans-serif;
+    }
+
+    .diagram text.sub {
+      fill: var(--text-muted);
+      font-weight: 400;
+      font-size: 10.5px;
+    }
+
+    .diagram text.lbl {
+      fill: var(--text-muted);
+      font: 500 10px var(--mono);
+    }
+
+    .diagram .line {
+      stroke: var(--text-muted);
+      stroke-width: 1.2;
+      fill: none;
+    }
+
+    .diagram .dash {
+      stroke-dasharray: 4 3;
+    }
+
+    .diagram .arrow {
+      fill: var(--text-muted);
+    }
+
+    ul.check {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.check li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    ul.check li::before {
+      content: '▸';
+      position: absolute;
+      left: 4px;
+      color: var(--accent);
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 14px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--text);
+    }
+
+    .project:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+
+    .project h3 {
+      margin: 0;
+      font-size: 16px;
+      word-break: break-word;
+    }
+
+    .project p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .project .meta {
+      display: flex;
+      gap: 12px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .dot {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-right: 5px;
+      vertical-align: 0;
+    }
+
+    .dot.cs {
+      background: #178600;
+    }
+
+    .dot.ts {
+      background: #3178c6;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 26px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .job {
+      position: relative;
+      margin-bottom: 26px;
+    }
+
+    .job::before {
+      content: '';
+      position: absolute;
+      left: -25px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 3px solid var(--accent);
+    }
+
+    .job h3 {
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .job .when {
+      font: 500 12.5px var(--mono);
+      color: var(--text-muted);
+      margin: 2px 0 8px;
+    }
+
+    .job .roles {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0 0 8px;
+    }
+
+    .job ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .job li {
+      margin-bottom: 4px;
+    }
+
+    /* Contact */
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#top">Rasel<span>.</span></a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#work">Featured work</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <span class="eyebrow">Dhaka, Bangladesh · Open to opportunities</span>
+      <h1>Md. Rasel Ahmed</h1>
+      <p class="role"><strong>Lead Software Engineer</strong> and Full Stack Developer. I design and build enterprise
+        web platforms with <strong>C#, ASP.NET Core, Angular and SQL Server</strong>, using microservices and
+        micro-frontends.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://www.linkedin.com/in/md-rasel-ahmed-290106b3/" target="_blank"
+          rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/raselahmedit09" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://leetcode.com/u/rasel_mbstu/" target="_blank" rel="noopener">LeetCode</a>
+        <!-- Add your CV: put resume.pdf in this repo, then remove the comment markers below -->
+        <!-- <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download CV</a> -->
+      </div>
+      <div class="stats">
+        <div class="stat"><b>13+</b><span>years of experience</span></div>
+        <div class="stat"><b>3 + 3</b><span>microservices &amp; micro-frontends led</span></div>
+        <div class="stat"><b>30+</b><span>shared UI components built</span></div>
+        <div class="stat"><b>3</b><span>companies, 1 promotion path to Lead</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p class="lead">I've spent 13+ years building software across .NET, Angular, SQL Server and Java, from ERP,
+        hospital and school systems to a cloud-native FinTech platform. Today I lead full-stack development of a US
+        retirement-plan platform at DataPath Ltd. I care about clean boundaries, reusable design systems, and code that
+        a team can keep growing safely.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="lead">The tools I use every day, and the patterns I build with them.</p>
+      <div class="skills">
+        <div class="card">
+          <h3>Backend</h3>
+          <div class="tags">
+            <span class="tag">C#</span><span class="tag">.NET 8</span><span class="tag">ASP.NET Core Web API</span>
+            <span class="tag">EF Core</span><span class="tag">Dapper</span><span class="tag">MediatR</span>
+            <span class="tag">FluentValidation</span><span class="tag">AutoMapper</span><span class="tag">Serilog</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Frontend</h3>
+          <div class="tags">
+            <span class="tag">Angular 21</span><span class="tag">TypeScript</span><span class="tag">RxJS</span>
+            <span class="tag">Micro-Frontends</span><span class="tag">Native / Module Federation</span>
+            <span class="tag">SCSS</span><span class="tag">Component Libraries</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Architecture</h3>
+          <div class="tags">
+            <span class="tag">Microservices</span><span class="tag">Clean Architecture</span><span
+              class="tag">CQRS</span>
+            <span class="tag">SOLID</span><span class="tag">Repository / Unit of Work</span><span class="tag">OpenAPI
+              contract-first</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Data · Cloud · Security</h3>
+          <div class="tags">
+            <span class="tag">SQL Server</span><span class="tag">Oracle</span><span class="tag">MongoDB</span>
+            <span class="tag">Azure Entra ID / MSAL</span><span class="tag">JWT / OAuth 2.0</span>
+            <span class="tag">Docker</span><span class="tag">AKS</span><span class="tag">Azure DevOps</span><span
+              class="tag">Prometheus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Featured work</h2>
+      <p class="lead">A retirement-plan web platform for plan participants, sponsors and advisors, built at DataPath
+        Ltd. (2024 – present).</p>
+      <div class="case">
+        <div class="card diagram">
+          <svg viewBox="0 0 520 400" role="img"
+            aria-label="Architecture: three Angular micro-frontends call three .NET 8 microservices backed by SQL Server, with Azure Entra ID login and a shared UI library">
+            <defs>
+              <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto-start-reverse">
+                <path class="arrow" d="M0,0 L10,5 L0,10 z" />
+              </marker>
+            </defs>
+
+            <text class="lbl" x="10" y="18">ANGULAR 21 MICRO-FRONTENDS · NATIVE FEDERATION</text>
+            <rect class="box fe" x="10" y="28" width="155" height="58" rx="10" />
+            <text x="87.5" y="53" text-anchor="middle">Auth app</text>
+            <text class="sub" x="87.5" y="71" text-anchor="middle">Login · Registration</text>
+            <rect class="box fe" x="182" y="28" width="155" height="58" rx="10" />
+            <text x="259.5" y="53" text-anchor="middle">Participant portal</text>
+            <text class="sub" x="259.5" y="71" text-anchor="middle">Dashboard · Accounts</text>
+            <rect class="box fe" x="354" y="28" width="156" height="58" rx="10" />
+            <text x="432" y="53" text-anchor="middle">Sponsor / Advisor</text>
+            <text class="sub" x="432" y="71" text-anchor="middle">Plan management</text>
+
+            <rect class="box" x="10" y="98" width="500" height="34" rx="8" />
+            <text x="260" y="120" text-anchor="middle">Shared UI &amp; utility libraries · 30+ components · npm
+              packages</text>
+
+            <rect class="box" x="10" y="160" width="140" height="54" rx="10" />
+            <text x="80" y="183" text-anchor="middle">Azure Entra ID</text>
+            <text class="sub" x="80" y="200" text-anchor="middle">External ID · MSAL</text>
+            <path class="line dash" d="M80 132 V158" marker-end="url(#ah)" />
+
+            <path class="line" d="M87.5 132 V140 H300 V158" />
+            <path class="line" d="M259.5 132 V158" marker-end="url(#ah)" />
+            <path class="line" d="M432 132 V140 H300" />
+            <rect class="box" x="175" y="160" width="335" height="54" rx="10" />
+            <text x="342.5" y="183" text-anchor="middle">Bearer JWT · refresh-token rotation</text>
+            <text class="sub" x="342.5" y="200" text-anchor="middle">Generated OpenAPI clients · AES-256 PII
+              encryption</text>
+
+            <path class="line" d="M342.5 214 V232 H87.5 V256" marker-end="url(#ah)" />
+            <path class="line" d="M259.5 232 V256" marker-end="url(#ah)" />
+            <path class="line" d="M342.5 232 H432 V256" marker-end="url(#ah)" />
+
+            <text class="lbl" x="10" y="250">.NET 8 MICROSERVICES · CLEAN ARCHITECTURE + CQRS</text>
+            <rect class="box be" x="10" y="258" width="155" height="58" rx="10" />
+            <text x="87.5" y="283" text-anchor="middle">Authentication</text>
+            <text class="sub" x="87.5" y="301" text-anchor="middle">Users · Invitations</text>
+            <rect class="box be" x="182" y="258" width="155" height="58" rx="10" />
+            <text x="259.5" y="283" text-anchor="middle">Participant</text>
+            <text class="sub" x="259.5" y="301" text-anchor="middle">Participant data</text>
+            <rect class="box be" x="354" y="258" width="156" height="58" rx="10" />
+            <text x="432" y="283" text-anchor="middle">PlanConnect</text>
+            <text class="sub" x="432" y="301" text-anchor="middle">Sponsor · Advisor</text>
+
+            <path class="line" d="M87.5 316 V344" marker-end="url(#ah)" />
+            <path class="line" d="M259.5 316 V344" marker-end="url(#ah)" />
+            <path class="line" d="M432 316 V344" marker-end="url(#ah)" />
+            <rect class="box" x="10" y="346" width="240" height="44" rx="10" />
+            <text x="130" y="373" text-anchor="middle">SQL Server · EF Core</text>
+            <rect class="box" x="270" y="346" width="240" height="44" rx="10" />
+            <text x="390" y="373" text-anchor="middle">Core recordkeeping APIs</text>
+          </svg>
+        </div>
+        <div class="card">
+          <ul class="check">
+            <li><strong>Backend:</strong> three .NET 8 microservices using Clean Architecture and CQRS (MediatR), with
+              FluentValidation pipeline behaviours, Repository/Unit of Work and EF Core on SQL Server.</li>
+            <li><strong>Frontend:</strong> three independently deployable Angular 21 micro-frontends built from
+              standalone components.</li>
+            <li><strong>Design system:</strong> an in-house UI library of 30+ components (forms, modals, charts,
+              wizards, PDF/Excel export), published as versioned packages.</li>
+            <li><strong>Security:</strong> Entra External ID login exchanged for a custom JWT session, with httpOnly
+              refresh-token rotation. Led the migration from cookie-based to bearer-token auth.</li>
+            <li><strong>PII protection:</strong> middleware that encrypts sensitive request parameters automatically
+              (AES-256), configured per service.</li>
+            <li><strong>Delivery:</strong> TypeScript clients generated from OpenAPI, Docker images deployed to AKS,
+              with Serilog and Prometheus for observability.</li>
+          </ul>
+          <p class="note">This is client work, so the source code is private. The diagram shows only the architecture.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Open-source projects</h2>
+      <p class="lead">Public repos that use the same patterns I use in production.</p>
+      <div class="projects">
+        <a class="card project" href="https://github.com/raselahmedit09/eshop-microservices-architecture"
+          target="_blank" rel="noopener">
+          <h3>eShop Microservices Architecture</h3>
+          <p>An e-commerce reference system split into independently deployable .NET microservices.</p>
+          <div class="meta"><span><i class="dot cs"></i>C#</span></div>
+        </a>
+        <a class="card project"
+          href="https://github.com/raselahmedit09/ASP.NET-Core-SOLID-and-Clean-Architecture-.NET-8" target="_blank"
+          rel="noopener">
+          <h3>ASP.NET Core SOLID &amp; Clean Architecture</h3>
+          <p>A .NET 8 template using Clean Architecture, SOLID principles and CQRS layering.</p>
+          <div class="meta"><span><i class="dot cs"></i>C#</span><span>★ 4</span></div>
+        </a>
+        <a class="card project" href="https://github.com/raselahmedit09/angular17-microfrontend" target="_blank"
+          rel="noopener">
+          <h3>Angular 17 Micro-Frontend</h3>
+          <p>Module Federation with Angular standalone components: a shell plus remotes.</p>
+          <div class="meta"><span><i class="dot ts"></i>TypeScript</span><span>★ 5</span></div>
+        </a>
+        <a class="card project" href="https://github.com/raselahmedit09/DapperWebApiDotNet8" target="_blank"
+          rel="noopener">
+          <h3>Dapper Web API (.NET 8)</h3>
+          <p>CRUD with Dapper in a .NET 8 Web API on SQL Server.</p>
+          <div class="meta"><span><i class="dot cs"></i>C#</span></div>
+        </a>
+        <a class="card project" href="https://github.com/raselahmedit09/Serilog-.net-8" target="_blank" rel="noopener">
+          <h3>Serilog for .NET 8</h3>
+          <p>Structured logging set up with Serilog in a .NET 8 application.</p>
+          <div class="meta"><span><i class="dot cs"></i>C#</span></div>
+        </a>
+        <a class="card project" href="https://github.com/raselahmedit09/ReadOffice365Mailbox" target="_blank"
+          rel="noopener">
+          <h3>Read Office 365 Mailbox</h3>
+          <p>Reads an Office 365 mailbox from C#.</p>
+          <div class="meta"><span><i class="dot cs"></i>C#</span><span>★ 2</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="lead">13+ years, from Java engineer to Lead.</p>
+      <div class="timeline">
+        <div class="job">
+          <h3>DataPath Ltd. · Dhaka</h3>
+          <div class="when">Feb 2018 – Present</div>
+          <p class="roles">Lead Software Engineer (Jul 2024 –) · Senior Software Engineer (Jul 2021 – Jun 2024) ·
+            Software Engineer (Feb 2018 – Jun 2021)</p>
+          <ul>
+            <li>Lead full-stack delivery of a US retirement-plan platform: .NET 8 microservices with Angular 21
+              micro-frontends.</li>
+            <li>Built and maintain the shared Angular component library used across all apps.</li>
+            <li>Designed hybrid Entra ID + JWT authentication and automatic PII encryption.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3>Next IT Ltd · Banani, Dhaka</h3>
+          <div class="when">Jun 2015 – Jan 2018</div>
+          <p class="roles">Software Engineer</p>
+          <ul>
+            <li>Built a Garments Accessories ERP covering 8 modules (Merchandising, Production, Inventory, LC, Finance,
+              HR &amp; Payroll) with ASP.NET Web API, AngularJS and SQL Server.</li>
+            <li>Built a Project File Service using Node.js, AngularJS and MongoDB.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <h3>ATI Limited · Uttara, Dhaka</h3>
+          <div class="when">Nov 2013 – May 2015</div>
+          <p class="roles">Java Software Engineer</p>
+          <ul>
+            <li>Built a Hospital Scheduling &amp; Rostering system and an online/offline School Management System (J2EE,
+              Struts2, Oracle, Java Swing).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="job">
+          <h3>Mawlana Bhashani Science &amp; Technology University</h3>
+          <div class="when">2009 – 2012</div>
+          <p class="roles">B.Sc. (Engg.), Information and Communication Technology</p>
+          <p class="roles">GPA: 3.13 / 4.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p class="lead">Open to conversations about senior, lead and architect roles in .NET and Angular.</p>
+      <div class="contact">
+        <!-- Replace with your personal email address -->
+        <a class="btn primary" href="mailto:rasel.ict09@gmail.com">Email me</a>
+        <a class="btn" href="tel:+8801727955518">+880 1727-955518</a>
+        <a class="btn" href="https://www.linkedin.com/in/md-rasel-ahmed-290106b3/" target="_blank"
+          rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/raselahmedit09" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://leetcode.com/u/rasel_mbstu/" target="_blank" rel="noopener">LeetCode</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© <span id="yr"></span> Md. Rasel Ahmed · Hosted on GitHub Pages</div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) { }
+      document.getElementById('themeBtn').addEventListener('click', function () {
+        var current = root.getAttribute('data-theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) { }
+      });
+      document.getElementById('yr').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+
+</html>
