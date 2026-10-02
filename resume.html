@@ -1,227 +1,745 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md. Rasel Ahmed | Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="MD. Rasel Ahmed - Team Lead and Full-Stack Software Engineer with 13+ years of experience in .NET, Angular, Microservices and Cloud-Native Development.">
+
+  <title>MD. Rasel Ahmed | Team Lead | Full-Stack Software Engineer</title>
+
   <style>
-    :root {
-      --text: #1f2937;
-      --muted: #4b5563;
-      --line: #d1d5db;
-      --accent: #1f3a8a;
-      --bg: #ffffff;
+    /*
+      ATS-FRIENDLY RESUME
+      - Single-column layout
+      - Semantic HTML
+      - No tables
+      - No icons/images
+      - No progress bars
+      - No complex flex/grid layout
+      - Standard fonts
+      - Text remains selectable/searchable in PDF
+    */
+
+    @page {
+      size: A4;
+      margin: 12mm 14mm;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html,
     body {
       margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #111111;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
+      font-size: 10.5pt;
+      line-height: 1.4;
     }
 
-    .page {
-      width: 210mm;
-      min-height: 297mm;
+    body {
+      padding: 0;
+    }
+
+    .resume {
+      max-width: 820px;
       margin: 0 auto;
-      padding: 14mm 16mm;
+      padding: 20px 0;
+    }
+
+    /* Header */
+
+    header {
+      margin-bottom: 14px;
     }
 
     h1 {
+      margin: 0 0 3px 0;
+      font-size: 24pt;
+      line-height: 1.15;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    .professional-title {
+      margin: 0 0 7px 0;
+      font-size: 12pt;
+      font-weight: 700;
+    }
+
+    .contact {
       margin: 0;
-      font-size: 26px;
-      letter-spacing: 0.02em;
+      font-size: 9.5pt;
+      line-height: 1.5;
+    }
+
+    .contact a {
+      color: #111111;
+      text-decoration: none;
+    }
+
+    /* Sections */
+
+    section {
+      margin-bottom: 13px;
     }
 
     h2 {
-      margin: 18px 0 8px;
-      font-size: 14px;
+      margin: 0 0 6px 0;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #333333;
+      font-size: 11.5pt;
+      line-height: 1.2;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 4px;
+      letter-spacing: 0.04em;
+      color: #000000;
     }
 
     h3 {
       margin: 0;
-      font-size: 13px;
+      font-size: 10.8pt;
+      line-height: 1.3;
+      font-weight: 700;
     }
 
-    p,
-    li {
-      margin: 0 0 6px;
-      font-size: 12px;
-      color: var(--text);
+    p {
+      margin: 0 0 5px 0;
     }
 
-    .header {
-      text-align: center;
-      margin-bottom: 6px;
-    }
-
-    .contact {
-      text-align: center;
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
+    /* Summary */
 
     .summary {
-      font-size: 12px;
+      margin: 0;
+      text-align: left;
     }
 
-    .section {
-      margin-top: 6px;
+    /* Skills */
+
+    .skill-category {
+      margin-bottom: 4px;
     }
 
-    .role-line {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      font-size: 12px;
-      margin: 2px 0 4px;
+    .skill-category strong {
+      font-weight: 700;
+    }
+
+    /* Experience */
+
+    .job {
+      margin-bottom: 11px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .job-header {
+      margin-bottom: 3px;
     }
 
     .job-title {
-      font-weight: bold;
+      font-weight: 700;
     }
 
-    .dates {
-      color: var(--muted);
-      white-space: nowrap;
+    .company {
+      font-weight: 700;
+    }
+
+    .job-meta {
+      margin: 1px 0 4px 0;
+      font-size: 9.5pt;
     }
 
     ul {
-      margin: 4px 0 0 18px;
+      margin: 3px 0 0 19px;
       padding: 0;
     }
 
-    .skills {
-      font-size: 12px;
+    li {
+      margin: 0 0 3px 0;
+      padding-left: 2px;
     }
 
-    .projects {
-      margin-top: 2px;
-    }
+    /* Projects */
 
-    .project-item {
+    .project {
       margin-bottom: 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
+
+    .project-title {
+      font-weight: 700;
+    }
+
+    .project-description {
+      margin: 2px 0 1px 0;
+    }
+
+    .project-link {
+      font-size: 9pt;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .project-link a {
+      color: #111111;
+      text-decoration: underline;
+    }
+
+    /* Education */
+
+    .education {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .degree {
+      font-weight: 700;
+    }
+
+    /* Additional Information */
+
+    .additional-item {
+      margin-bottom: 3px;
+    }
+
+    /* Print */
 
     @media print {
+
+      html,
       body {
+        width: 210mm;
+        background: #ffffff;
+      }
+
+      .resume {
+        width: auto;
+        max-width: none;
         margin: 0;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        padding: 0;
+      }
+
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      section,
+      .job,
+      .project,
+      .education {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+
+    @media screen {
+      body {
+        padding: 20px;
+      }
+
+      .resume {
+        max-width: 820px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="header">
+
+  <main class="resume">
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header>
       <h1>MD. RASEL AHMED</h1>
-    </div>
-    <div class="contact">
-      Dhaka, Bangladesh | +880 1727-955518 | rasel.ict09@gmail.com | linkedin.com/in/md-rasel-ahmed-290106b3 |
-      github.com/raselahmedit09
-    </div>
 
-    <div class="section">
-      <h2>Summary</h2>
+      <p class="professional-title">
+        Team Lead | Full-Stack Software Engineer
+      </p>
+
+      <p class="contact">
+        Dhaka, Bangladesh |
+        +880 1727-955518 |
+        <a href="mailto:rasel.ict09@gmail.com">rasel.ict09@gmail.com</a> |
+        <a href="https://www.linkedin.com/in/md-rasel-ahmed-290106b3/">
+          linkedin.com/in/md-rasel-ahmed-290106b3
+        </a> |
+        <a href="https://github.com/raselahmedit09">
+          github.com/raselahmedit09
+        </a>
+      </p>
+    </header>
+
+
+    <!-- =========================================================
+         PROFESSIONAL SUMMARY
+    ========================================================== -->
+
+    <section>
+      <h2>Professional Summary</h2>
+
       <p class="summary">
-        Team Lead and Full-Stack Software Engineer with 13+ years of experience designing and delivering enterprise
-        software platforms using C#, ASP.NET Core, Angular, SQL Server, and Java. Experienced in leading technical
-        direction for the RK.Web platform, software architecture, microservices, micro-frontend architecture, cloud
-        delivery, and team mentoring.
+        Team Lead and Full-Stack Software Engineer with 13+ years of experience
+        designing, developing, and delivering enterprise software platforms using
+        C#, .NET, ASP.NET Core, Angular, TypeScript, SQL Server, and Java.
+        Experienced in technical leadership, software architecture, microservices,
+        micro-frontends, REST APIs, Clean Architecture, CQRS, Domain-Driven Design
+        (DDD), cloud-native development, distributed systems, security, and reusable
+        software components. Currently leading technical direction for the RK.Web
+        enterprise retirement-plan platform across frontend, backend, and shared
+        engineering libraries. Experienced in architecture decisions, technical
+        design, code reviews, performance improvement, mentoring, cross-team
+        collaboration, and delivery. Also experienced in AI-assisted software
+        engineering using AI coding assistants for architecture exploration,
+        code generation, refactoring, debugging, documentation, and rapid
+        prototyping with human review and testing.
       </p>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Core Skills</h2>
-      <p class="skills">
-        C# · ASP.NET Core · Angular 21 · TypeScript · JavaScript · RxJS · Microservices · Micro-Frontends · Module
-        Federation · Clean Architecture · CQRS · DDD · REST APIs · SQL Server · Oracle · MongoDB · Azure · Azure DevOps
-        · GitHub Actions · Docker · OpenAPI · JWT · Entra ID · PII Encryption · Windows Services · WCF · J2EE · Struts2
+
+    <!-- =========================================================
+         CORE TECHNICAL SKILLS
+    ========================================================== -->
+
+    <section>
+      <h2>Core Technical Skills</h2>
+
+      <p class="skill-category">
+        <strong>Programming Languages:</strong>
+        C#, TypeScript, JavaScript, Java, SQL
       </p>
-    </div>
 
-    <div class="section">
+      <p class="skill-category">
+        <strong>Backend Development:</strong>
+        .NET, .NET 8, ASP.NET Core, ASP.NET Core Web API, ASP.NET Web API,
+        REST APIs, Entity Framework Core, Dapper, MediatR, FluentValidation,
+        Serilog, Windows Services, WCF
+      </p>
+
+      <p class="skill-category">
+        <strong>Frontend Development:</strong>
+        Angular, Angular 21, Angular Standalone Components, AngularJS,
+        TypeScript, JavaScript, RxJS, SCSS, Micro-Frontends,
+        Module Federation, Native Federation, Component Libraries,
+        Reusable UI Components
+      </p>
+
+      <p class="skill-category">
+        <strong>Architecture and Design:</strong>
+        Clean Architecture, Domain-Driven Design (DDD), CQRS, SOLID,
+        Microservices, Distributed Systems, Dependency Injection,
+        API Design, Contract-First Development, OpenAPI
+      </p>
+
+      <p class="skill-category">
+        <strong>Database:</strong>
+        Microsoft SQL Server, Oracle, MongoDB, Entity Framework Core,
+        Dapper, Stored Procedures, Query Optimization
+      </p>
+
+      <p class="skill-category">
+        <strong>Cloud and DevOps:</strong>
+        Microsoft Azure, Azure Kubernetes Service (AKS), Docker,
+        Azure DevOps, GitHub Actions, CI/CD, Cloud-Native Development
+      </p>
+
+      <p class="skill-category">
+        <strong>Security and Authentication:</strong>
+        Microsoft Entra ID, MSAL, JWT, OAuth 2.0, Bearer Authentication,
+        Refresh Tokens, PII Encryption
+      </p>
+
+      <p class="skill-category">
+        <strong>AI-Assisted Software Engineering:</strong>
+        AI Coding Assistants, Claude, AI-Assisted Development,
+        Code Generation, Architecture Exploration, Refactoring,
+        Debugging, Documentation, Rapid Prototyping
+      </p>
+
+      <p class="skill-category">
+        <strong>Tools and Engineering:</strong>
+        Git, TFS, Jira, Swagger, NSwag, OpenAPI Generator,
+        Visual Studio, Visual Studio Code, Code Review,
+        Technical Mentoring
+      </p>
+    </section>
+
+
+    <!-- =========================================================
+         PROFESSIONAL EXPERIENCE
+    ========================================================== -->
+
+    <section>
       <h2>Professional Experience</h2>
 
-      <div class="job">
-        <div class="role-line">
-          <div class="job-title">Lead Software Engineer</div>
-          <div class="dates">Feb 2018 – Present</div>
-        </div>
-        <div class="role-line">
-          <div>DataPath Ltd. · Dhaka</div>
-        </div>
-        <ul>
-          <li>Lead the technical direction of the RK.Web platform, covering architecture, technical design,
-            implementation, code quality, performance, and mentoring.</li>
-          <li>Deliver enterprise web platforms using Angular 21 micro-frontends, .NET 8 microservices, shared libraries,
-            and reusable UI components.</li>
-          <li>Design and implement hybrid Entra ID + JWT authentication, automatic PII encryption, and secure
-            distributed system patterns.</li>
-          <li>Build and maintain shared Angular component libraries, API contract standards, and cross-team engineering
-            practices.</li>
-          <li>Contribute to product delivery across RK.Web.Client, RK.Web.Backend, and RK.Web.Lib for a retirement-plan
-            platform.</li>
-          <li>Worked earlier on Unify.Backend, Unify.Frontend, CensusMassDataService, TPAManager, and
-            WindwardReportServer platforms.</li>
-        </ul>
-      </div>
 
-      <div class="job" style="margin-top: 12px;">
-        <div class="role-line">
-          <div class="job-title">Software Engineer</div>
-          <div class="dates">Jun 2015 – Jan 2018</div>
-        </div>
-        <div class="role-line">
-          <div>Next IT Ltd · Banani, Dhaka</div>
-        </div>
-        <ul>
-          <li>Built a Garments Accessories ERP with 8 modules including Merchandising, Production, Inventory, LC,
-            Finance, HR, and Payroll using ASP.NET Web API, AngularJS, and SQL Server.</li>
-          <li>Developed a Project File Service using Node.js, AngularJS, and MongoDB.</li>
-        </ul>
-      </div>
+      <!-- DataPath - Lead -->
 
-      <div class="job" style="margin-top: 12px;">
-        <div class="role-line">
-          <div class="job-title">Java Software Engineer</div>
-          <div class="dates">Nov 2013 – May 2015</div>
-        </div>
-        <div class="role-line">
-          <div>ATI Limited · Uttara, Dhaka</div>
-        </div>
-        <ul>
-          <li>Built a Hospital Scheduling and Rostering system and an online/offline School Management System using
-            J2EE, Struts2, Oracle, and Java Swing.</li>
-        </ul>
-      </div>
-    </div>
+      <article class="job">
 
-    <div class="section">
+        <div class="job-header">
+          <h3>
+            Lead Software Engineer
+          </h3>
+
+          <p class="job-meta">
+            <span class="company">DataPath Ltd.</span> |
+            Dhaka, Bangladesh |
+            February 2018 – Present
+          </p>
+        </div>
+
+        <ul>
+          <li>
+            Lead the technical direction and full-stack engineering for the
+            RK.Web enterprise retirement-plan platform across RK.Web.Client,
+            RK.Web.Backend, and RK.Web.Lib.
+          </li>
+
+          <li>
+            Design and implement enterprise applications using Angular,
+            Angular micro-frontends, ASP.NET Core, .NET 8 microservices,
+            SQL Server, and shared engineering libraries.
+          </li>
+
+          <li>
+            Guide software architecture, technical design, implementation
+            approaches, code quality, performance, maintainability, and
+            engineering standards.
+          </li>
+
+          <li>
+            Lead development of Angular micro-frontends using standalone
+            components, Module Federation, Native Federation, and reusable
+            component libraries.
+          </li>
+
+          <li>
+            Design backend services using Clean Architecture, CQRS,
+            Domain-Driven Design (DDD), SOLID principles, Dependency
+            Injection, MediatR, FluentValidation, and Entity Framework Core.
+          </li>
+
+          <li>
+            Establish REST API contracts and frontend integration patterns
+            using OpenAPI, Swagger, NSwag, and generated TypeScript clients.
+          </li>
+
+          <li>
+            Implement authentication and authorization using Microsoft
+            Entra ID, MSAL, JWT bearer authentication, OAuth 2.0,
+            and refresh-token based sessions.
+          </li>
+
+          <li>
+            Build and maintain shared Angular component libraries,
+            reusable UI components, API standards, documentation,
+            and cross-team engineering practices.
+          </li>
+
+          <li>
+            Mentor software engineers through technical discussions,
+            architecture guidance, implementation support, troubleshooting,
+            and code reviews.
+          </li>
+
+          <li>
+            Collaborate with product, QA, architecture, and engineering teams
+            to identify technical dependencies, integration issues, risks,
+            and delivery requirements.
+          </li>
+
+          <li>
+            Apply AI-assisted software engineering tools for architecture
+            exploration, code generation, refactoring, debugging,
+            documentation, and rapid prototyping while maintaining
+            human review, testing, and engineering discipline.
+          </li>
+
+          <li>
+            Earlier contributed to Unify.Backend, Unify.Frontend,
+            CensusMassDataService, TPAManager, and WindwardReportServer.
+          </li>
+        </ul>
+
+      </article>
+
+
+      <!-- Next IT -->
+
+      <article class="job">
+
+        <div class="job-header">
+          <h3>
+            Software Engineer
+          </h3>
+
+          <p class="job-meta">
+            <span class="company">Next IT Ltd.</span> |
+            Banani, Dhaka, Bangladesh |
+            June 2015 – January 2018
+          </p>
+        </div>
+
+        <ul>
+          <li>
+            Developed a Garments Accessories ERP system containing eight
+            business modules including Merchandising, Production,
+            Inventory, LC, Finance, HR, and Payroll.
+          </li>
+
+          <li>
+            Developed RESTful APIs using ASP.NET Web API and built
+            web applications using AngularJS and JavaScript.
+          </li>
+
+          <li>
+            Designed and implemented SQL Server database operations,
+            business workflows, stored procedures, and application logic.
+          </li>
+
+          <li>
+            Developed a Project File Service using Node.js, AngularJS,
+            and MongoDB.
+          </li>
+        </ul>
+
+      </article>
+
+
+      <!-- ATI -->
+
+      <article class="job">
+
+        <div class="job-header">
+          <h3>
+            Java Software Engineer
+          </h3>
+
+          <p class="job-meta">
+            <span class="company">ATI Limited</span> |
+            Uttara, Dhaka, Bangladesh |
+            November 2013 – May 2015
+          </p>
+        </div>
+
+        <ul>
+          <li>
+            Developed a Hospital Scheduling and Rostering system
+            using Java and J2EE technologies.
+          </li>
+
+          <li>
+            Worked on an online and offline School Management System.
+          </li>
+
+          <li>
+            Used J2EE, Struts2, Oracle Database, and Java Swing
+            for enterprise application development.
+          </li>
+        </ul>
+
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================
+         SELECTED PROJECTS
+    ========================================================== -->
+
+    <section>
+      <h2>Selected Projects</h2>
+
+
+      <article class="project">
+
+        <p>
+          <span class="project-title">
+            ASP.NET Core SOLID &amp; Clean Architecture (.NET 8)
+          </span>
+        </p>
+
+        <p class="project-description">
+          .NET 8 project demonstrating SOLID principles, Clean Architecture,
+          CQRS-oriented application design, and maintainable enterprise
+          backend development patterns.
+        </p>
+
+        <p class="project-link">
+          GitHub:
+          <a href="https://github.com/raselahmedit09/ASP.NET-Core-SOLID-and-Clean-Architecture-.NET-8">
+            https://github.com/raselahmedit09/ASP.NET-Core-SOLID-and-Clean-Architecture-.NET-8
+          </a>
+        </p>
+
+      </article>
+
+
+      <article class="project">
+
+        <p>
+          <span class="project-title">
+            Angular 17 Micro-Frontend
+          </span>
+        </p>
+
+        <p class="project-description">
+          Angular standalone component architecture demonstrating
+          Micro-Frontends, Module Federation, shell applications,
+          and remote applications.
+        </p>
+
+        <p class="project-link">
+          GitHub:
+          <a href="https://github.com/raselahmedit09/angular17-microfrontend">
+            https://github.com/raselahmedit09/angular17-microfrontend
+          </a>
+        </p>
+
+      </article>
+
+
+      <article class="project">
+
+        <p>
+          <span class="project-title">
+            Dapper Web API (.NET 8)
+          </span>
+        </p>
+
+        <p class="project-description">
+          ASP.NET Core Web API demonstrating Dapper-based data access,
+          SQL Server integration, RESTful CRUD operations, and
+          database-driven application development.
+        </p>
+
+        <p class="project-link">
+          GitHub:
+          <a href="https://github.com/raselahmedit09/DapperWebApiDotNet8">
+            https://github.com/raselahmedit09/DapperWebApiDotNet8
+          </a>
+        </p>
+
+      </article>
+
+
+      <article class="project">
+
+        <p>
+          <span class="project-title">
+            Serilog for .NET 8
+          </span>
+        </p>
+
+        <p class="project-description">
+          Structured logging implementation using Serilog in a
+          .NET 8 application for application monitoring and diagnostics.
+        </p>
+
+        <p class="project-link">
+          GitHub:
+          <a href="https://github.com/raselahmedit09/Serilog-.net-8">
+            https://github.com/raselahmedit09/Serilog-.net-8
+          </a>
+        </p>
+
+      </article>
+
+
+      <article class="project">
+
+        <p>
+          <span class="project-title">
+            eShop Microservices Architecture
+          </span>
+        </p>
+
+        <p class="project-description">
+          .NET microservices reference implementation exploring
+          microservices architecture, Domain-Driven Design,
+          Clean Architecture, and distributed application patterns.
+        </p>
+
+        <p class="project-link">
+          GitHub:
+          <a href="https://github.com/raselahmedit09/eshop-microservices-architecture">
+            https://github.com/raselahmedit09/eshop-microservices-architecture
+          </a>
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================
+         EDUCATION
+    ========================================================== -->
+
+    <section>
       <h2>Education</h2>
-      <div class="role-line">
-        <div class="job-title">B.Sc. (Engg.), Information and Communication Technology</div>
-        <div class="dates">Apr 2009 – Sep 2013</div>
-      </div>
-      <p>Mawlana Bhashani Science &amp; Technology University</p>
-      <p>CGPA: 3.13 / 4.00</p>
-    </div>
 
-  </div>
+      <article class="education">
+
+        <p class="degree">
+          B.Sc. (Engg.) in Information and Communication Technology
+        </p>
+
+        <p>
+          Mawlana Bhashani Science &amp; Technology University
+        </p>
+
+        <p>
+          April 2009 – September 2013 |
+          CGPA: 3.13 / 4.00
+        </p>
+
+      </article>
+    </section>
+
+
+    <!-- =========================================================
+         ADDITIONAL INFORMATION
+    ========================================================== -->
+
+    <section>
+      <h2>Additional Information</h2>
+
+      <p class="additional-item">
+        <strong>Professional Focus:</strong>
+        Team Leadership, Full-Stack Engineering, Software Architecture,
+        .NET, Angular, Microservices, Micro-Frontends, Cloud-Native
+        Development, and AI-Assisted Software Engineering
+      </p>
+
+      <p class="additional-item">
+        <strong>GitHub:</strong>
+        <a href="https://github.com/raselahmedit09">
+          github.com/raselahmedit09
+        </a>
+      </p>
+
+      <p class="additional-item">
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/md-rasel-ahmed-290106b3/">
+          linkedin.com/in/md-rasel-ahmed-290106b3
+        </a>
+      </p>
+
+    </section>
+
+  </main>
+
 </body>
 
 </html>
