@@ -38,8 +38,8 @@
       background: #ffffff;
       color: #111111;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.4;
+      font-size: 11pt;
+      line-height: 1.32;
     }
 
     body {
@@ -55,27 +55,27 @@
     /* Header */
 
     header {
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     h1 {
       margin: 0 0 3px 0;
-      font-size: 24pt;
+      font-size: 23pt;
       line-height: 1.15;
       font-weight: 700;
       color: #000000;
     }
 
     .professional-title {
-      margin: 0 0 7px 0;
-      font-size: 12pt;
+      margin: 0 0 5px 0;
+      font-size: 12.5pt;
       font-weight: 700;
     }
 
     .contact {
       margin: 0;
-      font-size: 9.5pt;
-      line-height: 1.5;
+      font-size: 10.5pt;
+      line-height: 1.4;
     }
 
     .contact a {
@@ -86,14 +86,14 @@
     /* Sections */
 
     section {
-      margin-bottom: 13px;
+      margin-bottom: 10px;
     }
 
     h2 {
-      margin: 0 0 6px 0;
-      padding-bottom: 3px;
+      margin: 0 0 5px 0;
+      padding-bottom: 2px;
       border-bottom: 1px solid #333333;
-      font-size: 11.5pt;
+      font-size: 12pt;
       line-height: 1.2;
       font-weight: 700;
       text-transform: uppercase;
@@ -103,13 +103,13 @@
 
     h3 {
       margin: 0;
-      font-size: 10.8pt;
+      font-size: 11pt;
       line-height: 1.3;
       font-weight: 700;
     }
 
     p {
-      margin: 0 0 5px 0;
+      margin: 0 0 4px 0;
     }
 
     /* Summary */
@@ -122,7 +122,7 @@
     /* Skills */
 
     .skill-category {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .skill-category strong {
@@ -132,13 +132,13 @@
     /* Experience */
 
     .job {
-      margin-bottom: 11px;
+      margin-bottom: 9px;
       page-break-inside: avoid;
       break-inside: avoid;
     }
 
     .job-header {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .job-title {
@@ -150,12 +150,12 @@
     }
 
     .job-meta {
-      margin: 1px 0 4px 0;
-      font-size: 9.5pt;
+      margin: 1px 0 3px 0;
+      font-size: 10.5pt;
     }
 
     ul {
-      margin: 3px 0 0 19px;
+      margin: 2px 0 0 18px;
       padding: 0;
     }
 
@@ -177,11 +177,11 @@
     }
 
     .project-description {
-      margin: 2px 0 1px 0;
+      margin: 0;
     }
 
     .project-link {
-      font-size: 9pt;
+      font-size: 11pt;
       overflow-wrap: anywhere;
       word-break: break-word;
     }
@@ -205,7 +205,7 @@
     /* Additional Information */
 
     .additional-item {
-      margin-bottom: 3px;
+      margin-bottom: 1px;
     }
 
     /* Print */
@@ -230,12 +230,21 @@
         text-decoration: none;
       }
 
-      section,
       .job,
       .project,
       .education {
         page-break-inside: avoid;
         break-inside: avoid;
+      }
+
+      h2 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+
+      .projects-section {
+        page-break-before: always;
+        break-before: page;
       }
     }
 
@@ -314,62 +323,39 @@
       <h2>Core Technical Skills</h2>
 
       <p class="skill-category">
-        <strong>Programming Languages:</strong>
-        C#, TypeScript, JavaScript, Java, SQL
+        <strong>Languages and Backend:</strong>
+        C#, Java, SQL, .NET 8, ASP.NET Core, Web API, REST, Entity Framework Core,
+        Dapper, MediatR, FluentValidation, WCF
       </p>
 
       <p class="skill-category">
-        <strong>Backend Development:</strong>
-        .NET, .NET 8, ASP.NET Core, ASP.NET Core Web API, ASP.NET Web API,
-        REST APIs, Entity Framework Core, Dapper, MediatR, FluentValidation,
-        Serilog, Windows Services, WCF
+        <strong>Frontend:</strong>
+        Angular, AngularJS, TypeScript, JavaScript, RxJS, SCSS,
+        Micro-Frontends, Module Federation
       </p>
 
       <p class="skill-category">
-        <strong>Frontend Development:</strong>
-        Angular, Angular 21, Angular Standalone Components, AngularJS,
-        TypeScript, JavaScript, RxJS, SCSS, Micro-Frontends,
-        Module Federation, Native Federation, Component Libraries,
-        Reusable UI Components
+        <strong>Architecture:</strong>
+        Microservices, Clean Architecture, DDD, CQRS, SOLID, distributed systems,
+        dependency injection, API design, OpenAPI
       </p>
 
       <p class="skill-category">
-        <strong>Architecture and Design:</strong>
-        Clean Architecture, Domain-Driven Design (DDD), CQRS, SOLID,
-        Microservices, Distributed Systems, Dependency Injection,
-        API Design, Contract-First Development, OpenAPI
+        <strong>Data and Security:</strong>
+        SQL Server, Oracle, MongoDB, stored procedures, query optimization,
+        Microsoft Entra ID, MSAL, JWT, OAuth 2.0
       </p>
 
       <p class="skill-category">
-        <strong>Database:</strong>
-        Microsoft SQL Server, Oracle, MongoDB, Entity Framework Core,
-        Dapper, Stored Procedures, Query Optimization
+        <strong>Cloud, DevOps and Tools:</strong>
+        Azure, AKS, Docker, Azure DevOps, GitHub Actions, CI/CD, Git, Jira,
+        Swagger, Visual Studio
       </p>
 
       <p class="skill-category">
-        <strong>Cloud and DevOps:</strong>
-        Microsoft Azure, Azure Kubernetes Service (AKS), Docker,
-        Azure DevOps, GitHub Actions, CI/CD, Cloud-Native Development
-      </p>
-
-      <p class="skill-category">
-        <strong>Security and Authentication:</strong>
-        Microsoft Entra ID, MSAL, JWT, OAuth 2.0, Bearer Authentication,
-        Refresh Tokens, PII Encryption
-      </p>
-
-      <p class="skill-category">
-        <strong>AI-Assisted Software Engineering:</strong>
-        AI Coding Assistants, Claude, AI-Assisted Development,
-        Code Generation, Architecture Exploration, Refactoring,
-        Debugging, Documentation, Rapid Prototyping
-      </p>
-
-      <p class="skill-category">
-        <strong>Tools and Engineering:</strong>
-        Git, TFS, Jira, Swagger, NSwag, OpenAPI Generator,
-        Visual Studio, Visual Studio Code, Code Review,
-        Technical Mentoring
+        <strong>AI-Assisted Engineering:</strong>
+        AI coding assistants, code generation, refactoring, debugging,
+        documentation, rapid prototyping
       </p>
     </section>
 
@@ -399,76 +385,10 @@
         </div>
 
         <ul>
-          <li>
-            Lead the technical direction and full-stack engineering for the
-            RK.Web enterprise retirement-plan platform across RK.Web.Client,
-            RK.Web.Backend, and RK.Web.Lib.
-          </li>
-
-          <li>
-            Design and implement enterprise applications using Angular,
-            Angular micro-frontends, ASP.NET Core, .NET 8 microservices,
-            SQL Server, and shared engineering libraries.
-          </li>
-
-          <li>
-            Guide software architecture, technical design, implementation
-            approaches, code quality, performance, maintainability, and
-            engineering standards.
-          </li>
-
-          <li>
-            Lead development of Angular micro-frontends using standalone
-            components, Module Federation, Native Federation, and reusable
-            component libraries.
-          </li>
-
-          <li>
-            Design backend services using Clean Architecture, CQRS,
-            Domain-Driven Design (DDD), SOLID principles, Dependency
-            Injection, MediatR, FluentValidation, and Entity Framework Core.
-          </li>
-
-          <li>
-            Establish REST API contracts and frontend integration patterns
-            using OpenAPI, Swagger, NSwag, and generated TypeScript clients.
-          </li>
-
-          <li>
-            Implement authentication and authorization using Microsoft
-            Entra ID, MSAL, JWT bearer authentication, OAuth 2.0,
-            and refresh-token based sessions.
-          </li>
-
-          <li>
-            Build and maintain shared Angular component libraries,
-            reusable UI components, API standards, documentation,
-            and cross-team engineering practices.
-          </li>
-
-          <li>
-            Mentor software engineers through technical discussions,
-            architecture guidance, implementation support, troubleshooting,
-            and code reviews.
-          </li>
-
-          <li>
-            Collaborate with product, QA, architecture, and engineering teams
-            to identify technical dependencies, integration issues, risks,
-            and delivery requirements.
-          </li>
-
-          <li>
-            Apply AI-assisted software engineering tools for architecture
-            exploration, code generation, refactoring, debugging,
-            documentation, and rapid prototyping while maintaining
-            human review, testing, and engineering discipline.
-          </li>
-
-          <li>
-            Earlier contributed to Unify.Backend, Unify.Frontend,
-            CensusMassDataService, TPAManager, and WindwardReportServer.
-          </li>
+          <li>Lead full-stack engineering for RK.Web, an enterprise retirement-plan platform, across Angular clients, .NET backend services, and shared libraries.</li>
+          <li>Design Angular micro-frontends and .NET 8 services using Module Federation, Clean Architecture, CQRS, DDD, SOLID, SQL Server, and REST/OpenAPI contracts.</li>
+          <li>Guide technical design, security, code quality, performance, engineering standards, and reusable components; mentor engineers and conduct code reviews.</li>
+          <li>Collaborate across product, QA, and engineering; apply AI-assisted development with human review and testing. Earlier contributed to Unify, CensusMassDataService, TPAManager, and WindwardReportServer.</li>
         </ul>
 
       </article>
@@ -491,26 +411,8 @@
         </div>
 
         <ul>
-          <li>
-            Developed a Garments Accessories ERP system containing eight
-            business modules including Merchandising, Production,
-            Inventory, LC, Finance, HR, and Payroll.
-          </li>
-
-          <li>
-            Developed RESTful APIs using ASP.NET Web API and built
-            web applications using AngularJS and JavaScript.
-          </li>
-
-          <li>
-            Designed and implemented SQL Server database operations,
-            business workflows, stored procedures, and application logic.
-          </li>
-
-          <li>
-            Developed a Project File Service using Node.js, AngularJS,
-            and MongoDB.
-          </li>
+          <li>Developed an eight-module Garments Accessories ERP covering merchandising, production, inventory, finance, HR, and payroll using ASP.NET Web API, AngularJS, JavaScript, and SQL Server.</li>
+          <li>Built a Project File Service with Node.js, AngularJS, and MongoDB; implemented database workflows and stored procedures.</li>
         </ul>
 
       </article>
@@ -533,19 +435,7 @@
         </div>
 
         <ul>
-          <li>
-            Developed a Hospital Scheduling and Rostering system
-            using Java and J2EE technologies.
-          </li>
-
-          <li>
-            Worked on an online and offline School Management System.
-          </li>
-
-          <li>
-            Used J2EE, Struts2, Oracle Database, and Java Swing
-            for enterprise application development.
-          </li>
+          <li>Developed hospital scheduling and rostering and online/offline school management systems using Java, J2EE, Struts2, Oracle, and Java Swing.</li>
         </ul>
 
       </article>
@@ -557,126 +447,26 @@
          SELECTED PROJECTS
     ========================================================== -->
 
-    <section>
+    <section class="projects-section">
       <h2>Selected Projects</h2>
 
 
       <article class="project">
-
-        <p>
-          <span class="project-title">
-            ASP.NET Core SOLID &amp; Clean Architecture (.NET 8)
-          </span>
-        </p>
-
-        <p class="project-description">
-          .NET 8 project demonstrating SOLID principles, Clean Architecture,
-          CQRS-oriented application design, and maintainable enterprise
-          backend development patterns.
-        </p>
-
-        <p class="project-link">
-          GitHub:
-          <a href="https://github.com/raselahmedit09/ASP.NET-Core-SOLID-and-Clean-Architecture-.NET-8">
-            https://github.com/raselahmedit09/ASP.NET-Core-SOLID-and-Clean-Architecture-.NET-8
-          </a>
-        </p>
-
+        <p><span class="project-title">eShop Microservices Architecture</span></p>
+        <p class="project-description">.NET microservices reference system demonstrating Clean Architecture, DDD, and distributed application patterns.</p>
+        <p class="project-link">GitHub: <a href="https://github.com/raselahmedit09/eshop-microservices-architecture">github.com/raselahmedit09/eshop-microservices-architecture</a></p>
       </article>
 
-
       <article class="project">
-
-        <p>
-          <span class="project-title">
-            Angular 17 Micro-Frontend
-          </span>
-        </p>
-
-        <p class="project-description">
-          Angular standalone component architecture demonstrating
-          Micro-Frontends, Module Federation, shell applications,
-          and remote applications.
-        </p>
-
-        <p class="project-link">
-          GitHub:
-          <a href="https://github.com/raselahmedit09/angular17-microfrontend">
-            https://github.com/raselahmedit09/angular17-microfrontend
-          </a>
-        </p>
-
+        <p><span class="project-title">ASP.NET Core SOLID and Clean Architecture (.NET 8)</span></p>
+        <p class="project-description">.NET 8 implementation of SOLID principles, Clean Architecture, and CQRS-oriented backend design.</p>
+        <p class="project-link">GitHub: <a href="https://github.com/raselahmedit09/ASP.NET-Core-SOLID-and-Clean-Architecture-.NET-8">github.com/raselahmedit09/ASP.NET-Core-SOLID-and-Clean-Architecture-.NET-8</a></p>
       </article>
 
-
       <article class="project">
-
-        <p>
-          <span class="project-title">
-            Dapper Web API (.NET 8)
-          </span>
-        </p>
-
-        <p class="project-description">
-          ASP.NET Core Web API demonstrating Dapper-based data access,
-          SQL Server integration, RESTful CRUD operations, and
-          database-driven application development.
-        </p>
-
-        <p class="project-link">
-          GitHub:
-          <a href="https://github.com/raselahmedit09/DapperWebApiDotNet8">
-            https://github.com/raselahmedit09/DapperWebApiDotNet8
-          </a>
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <p>
-          <span class="project-title">
-            Serilog for .NET 8
-          </span>
-        </p>
-
-        <p class="project-description">
-          Structured logging implementation using Serilog in a
-          .NET 8 application for application monitoring and diagnostics.
-        </p>
-
-        <p class="project-link">
-          GitHub:
-          <a href="https://github.com/raselahmedit09/Serilog-.net-8">
-            https://github.com/raselahmedit09/Serilog-.net-8
-          </a>
-        </p>
-
-      </article>
-
-
-      <article class="project">
-
-        <p>
-          <span class="project-title">
-            eShop Microservices Architecture
-          </span>
-        </p>
-
-        <p class="project-description">
-          .NET microservices reference implementation exploring
-          microservices architecture, Domain-Driven Design,
-          Clean Architecture, and distributed application patterns.
-        </p>
-
-        <p class="project-link">
-          GitHub:
-          <a href="https://github.com/raselahmedit09/eshop-microservices-architecture">
-            https://github.com/raselahmedit09/eshop-microservices-architecture
-          </a>
-        </p>
-
+        <p><span class="project-title">Angular Micro-Frontend</span></p>
+        <p class="project-description">Angular standalone components with Module Federation, shell, and remote application architecture.</p>
+        <p class="project-link">GitHub: <a href="https://github.com/raselahmedit09/angular17-microfrontend">github.com/raselahmedit09/angular17-microfrontend</a></p>
       </article>
 
     </section>
@@ -707,36 +497,6 @@
       </article>
     </section>
 
-
-    <!-- =========================================================
-         ADDITIONAL INFORMATION
-    ========================================================== -->
-
-    <section>
-      <h2>Additional Information</h2>
-
-      <p class="additional-item">
-        <strong>Professional Focus:</strong>
-        Team Leadership, Full-Stack Engineering, Software Architecture,
-        .NET, Angular, Microservices, Micro-Frontends, Cloud-Native
-        Development, and AI-Assisted Software Engineering
-      </p>
-
-      <p class="additional-item">
-        <strong>GitHub:</strong>
-        <a href="https://github.com/raselahmedit09">
-          github.com/raselahmedit09
-        </a>
-      </p>
-
-      <p class="additional-item">
-        <strong>LinkedIn:</strong>
-        <a href="https://www.linkedin.com/in/md-rasel-ahmed-290106b3/">
-          linkedin.com/in/md-rasel-ahmed-290106b3
-        </a>
-      </p>
-
-    </section>
 
   </main>
 
